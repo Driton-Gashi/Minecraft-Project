@@ -1,0 +1,488 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css");
+@font-face {
+  font-family: minecraft-font;
+  src: url(../assets/font/Minecraft_font.ttf);
+}
+@font-face {
+  font-family: myFont;
+  src: url(../assets/font/Profontwindows-axBMx.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.background {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+    url(../assets/img/slideshow/171170.jpg);
+  /* background-image: url(../assets/img/slideshow/171170.jpg); */
+  background-size: cover !important;
+  background-position: center !important;
+}
+header {
+  backdrop-filter: blur(5px);
+  transition: 0.4s ease all !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2em;
+  display: flex;
+  background-color: transparent;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  border-bottom: 2px solid #fff;
+}
+.header-aktive {
+  background: rgba(17, 17, 17, 0.8);
+  border-bottom: 2px solid green;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .menu > li {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 10px;
+  border-bottom: 2px solid transparent;
+  transition: 0.1s ease all;
+}
+header .menu > li:hover {
+  border-color: #fff;
+}
+header.header-aktive .menu > li:hover {
+  border-color: green;
+}
+header .menu li a,
+.dropdown > li {
+  color: #fff;
+  text-decoration: none;
+  font-family: MyFont;
+  font-size: 1.2em;
+}
+header .header-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header-icons i {
+  padding: 0 0.5em;
+  color: #fff;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+header .header-icons .btn,
+.about .about-minecraft .btn {
+  background-color: #fff;
+  color: #000;
+  padding: 6px 25px;
+  margin: 0 0 0 1em;
+  border-radius: 3px;
+  font-family: MyFont;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.4s ease all;
+  border: 1px solid transparent;
+}
+header.header-aktive .btn {
+  background-color: transparent;
+  color: green;
+  border-color: green;
+}
+
+header .header-icons .btn:hover {
+  background-color: transparent;
+  color: #fff;
+  border-color: #ffffff;
+}
+.profile {
+  width: 100px;
+  text-align: center;
+  position: relative;
+}
+.profile img {
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: contrast(120%);
+  cursor: pointer;
+  transition: 0.3s ease all;
+  border: 2px solid transparent;
+}
+.profile img:hover {
+  filter: brightness(120%);
+}
+
+.profile-menu {
+  border: 1px solid green;
+  min-width: 200px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 3;
+  background-color: #111;
+  border-radius: 4px;
+  font-family: myFont;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+}
+.profile-menu li {
+  color: #fff;
+  width: 100%;
+  font-size: 0.8em;
+  border-bottom: 1px solid rgba(0, 128, 0, 0.4);
+  padding: 0.5em;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.1s ease all;
+}
+.profile-menu li:hover {
+  background-color: #222;
+}
+.profile-menu li i {
+  color: #fff;
+}
+.profile::after {
+  content: " ";
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  position: absolute;
+  top: 4px;
+  right: 25px;
+  background-color: green;
+  border-radius: 50%;
+}
+.background .hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background .hero .slideshow {
+  width: 100%;
+  height: 50vh;
+}
+
+/* about Section */
+.about {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+    url(../assets/img/slideshow/171197.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  color: #fff;
+}
+.about .about-minecraft {
+  width: 800px;
+  font-family: MyFont;
+  padding-top: 5em;
+}
+.about .about-minecraft h1 {
+  padding: 0.5em 0;
+}
+.video {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  border: 1px solid white;
+  border: 10px solid rgba(0, 0, 0, 0.1);
+}
+
+.about .about-minecraft .btn {
+  display: inline-block;
+  margin: 1em 0;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  width: 200px;
+}
+.about-minecraft-mouseover {
+  color: lightgreen !important;
+  border-color: lightgreen !important;
+}
+.about .about-minecraft .btn img {
+  margin: 0 10px;
+  position: relative;
+  transition: 0.4s ease all !important;
+  right: 0;
+}
+.about .about-minecraft .btn:hover {
+  background: transparent;
+  color: #fff;
+}
+.about .about-minecraft .btn:hover img {
+  right: -45px;
+}
+.video iframe {
+  border: 10px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Sign Up section */
+#sign-up {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#sign-up .close img {
+  -webkit-filter: invert(100%); /* Safari/Chrome */
+  filter: invert(100%);
+  width: 50px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+.close img:active {
+  transform: translateY(-1px);
+}
+.noScroll {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.show {
+  display: block !important;
+}
+.hide {
+  display: none !important;
+}
+.sign-up-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up-form {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-up-form form {
+  color: #fff;
+  background-color: #111;
+  min-height: 350px;
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 6px;
+}
+.sign-up-form form .center {
+  width: 70%;
+  font-family: myFont;
+}
+.username-label,
+.password-label,
+.confirm-password-label,
+.sign-up-form button {
+  font-weight: lighter;
+  padding-bottom: 0.1em;
+}
+
+.sign-up-form .username {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border-radius: 3px;
+  border: 0;
+  color: black;
+}
+.keep-me-logged-in {
+  font-size: 0.8em;
+  padding: 0.5em 0;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+}
+.keep-me-logged-in input {
+  margin-right: 0.5em;
+}
+
+.sign-up-form .password,
+.confirm-password {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 3px;
+  border: 0;
+  margin-bottom: 1em;
+}
+
+.sign-up-form button {
+  margin-top: 0.5em;
+  padding: 0.6em 2em;
+  font-family: myFont;
+  font-weight: 600;
+  background-color: green;
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 3px;
+  transition: 0.4s ease transform;
+}
+button.wrong-password {
+  transform: translateX(220px);
+}
+.sign-up-form button:hover {
+  background-color: rgba(0, 128, 0, 0.664);
+}
+.register-message {
+  font-weight: lighter;
+  position: absolute;
+  font-size: 1em;
+  bottom: 1em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.register-message-btn {
+  color: green;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease color;
+}
+.register-message-btn:hover {
+  color: rgba(0, 128, 0, 0.8);
+}
+.validation-message {
+  color: crimson;
+  font-weight: 600;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.validation-message.welcome {
+  color: green;
+}
+.validation-message img {
+  margin-right: 1em;
+}
+.sign-up-form form > img {
+  width: 250px;
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  object-fit: scale-down;
+  transform: translate(-50%, -50%);
+  filter: contrast(130%);
+}
+.sign-up-form button:active {
+  transform: translateY(-1px);
+}
+.sign-up-img {
+  width: 40%;
+}
+.sign-up-img .creeper {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  width: 200px;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: contrast(120%);
+}
+.sign-up-img .ghast {
+  position: absolute;
+  width: 100px;
+
+  object-fit: scale-down;
+  filter: contrast(150%);
+  animation: ghastMove 10s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.dog-cat {
+  position: absolute;
+  top: 55%;
+  left: 88%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  width: 250px;
+  object-fit: scale-down;
+}
+.mushroom {
+  animation: mushroomAnimation 0.5s ease-in-out alternate infinite;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  width: 100px;
+  transform: translate(-50%, -50%);
+}
+@keyframes ghastMove {
+  0% {
+    right: 10%;
+    top: -25%;
+  }
+  50% {
+    top: 5%;
+    right: 10%;
+  }
+  100% {
+    right: 65%;
+    top: 5%;
+  }
+}
+@keyframes mushroomAnimation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+.dropdown-icon {
+  font-size: 0.8em;
+}
+.dropdown-parent {
+  position: relative;
+}
+.dropdown {
+  position: absolute;
+  top: 2em;
+  left: 0;
+  background-color: #111;
+  min-width: 175px;
+  list-style-type: none;
+  border-radius: 6px;
+  border: 1px solid #111;
+}
+.dropdown > li {
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-size: 1em;
+  border-bottom: 1px solid #222;
+  transition: 0.1s ease all;
+}
+.dropdown > li:hover {
+  background-color: #222;
+}
+/* Sectioni Drijonit, qetu shkrun CSS per Footer*/
+
+/* Sign Up Form per Drijonin */
