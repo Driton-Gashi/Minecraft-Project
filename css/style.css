@@ -183,7 +183,7 @@ header .header-icons .btn:hover {
 
 /* about Section */
 .about {
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
     url(../assets/img/slideshow/171197.jpg);
   background-size: cover;
