@@ -168,6 +168,7 @@ header .header-icons .btn:hover {
   border-radius: 50%;
 }
 .background .hero {
+  border: 1px solid #fff;
   height: 90vh;
   display: flex;
   justify-content: center;
@@ -175,6 +176,8 @@ header .header-icons .btn:hover {
 }
 .background .hero .slideshow {
   width: 100%;
+  border: 1px solid #fff;
+
   height: 50vh;
 }
 
