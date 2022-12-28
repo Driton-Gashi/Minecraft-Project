@@ -7,6 +7,98 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Block Page</h1>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Minecraft Project</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link
+          rel="shortcut icon"
+          href="./assets/img/favicon.ico"
+          type="image/x-icon"
+        />
+      </head>
+      <body>
+        <!--Shto autoplay tek audio per mu dhez muzika vet  -->
+        <audio autoplay loop class="minecraft-audio">
+          <source
+            src="./assets/audio/Minecraft-Theme-Song.mp3"
+            type="audio/mp3"
+          />
+        </audio>
+
+        <div class="background">
+          <header>
+            <div class="logo">
+              <a href="./index.html">
+                <img
+                  width="130px"
+                  src="./assets/img/Minecraft-Logo.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <nav>
+              <ul class="menu">
+                <li><a href="#top">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Showcase</a></li>
+                <li class="dropdown-parent">
+                  <a href="#"
+                    >Guide <i class="bi bi-chevron-down dropdown-icon"></i
+                  ></a>
+                  <ul class="dropdown hide">
+                    <li>Mobs</li>
+                    <li
+                      onclick="(()=>{
+                    window.location = './pages/Blocks.html'
+                  })()"
+                    >
+                      Blocks
+                    </li>
+                    <li>Foods</li>
+                    <li>Biomes</li>
+                  </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="header-icons">
+              <i class="bi bi-volume-up-fill unMute"></i>
+
+              <i class="bi bi-volume-mute-fill mute hide"></i>
+
+              <div class="btn">Sign Up</div>
+              <div class="profile hide">
+                <img src="./assets/img/profile-image.png" alt="" />
+                <ul class="profile-menu hide">
+                  <li>
+                    <i class="bi bi-person-circle"></i> Edit Profile &ThinSpace;
+                    (<span class="name"></span>)
+                  </li>
+                  <li><i class="bi bi-gear-fill"></i> Settings</li>
+                  <li><i class="bi bi-gear-fill"></i> Settings</li>
+                  <li onclick="logOut()">
+                    <i class="bi bi-box-arrow-left"></i> Log Out
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </header>
+          <div class="hero">
+            <div class="slideshow"></div>
+          </div>
+        </div>
+
+        <!-- Section i Drijonit -->
+        <footer>
+          <!-- Prej qe tu ja fillon me shkru HTML -->
+        </footer>
+      </body>
+      <script defer src="./js/app.js"></script>
+    </html>
   </body>
 </html>
