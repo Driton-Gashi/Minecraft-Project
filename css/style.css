@@ -260,9 +260,7 @@ header .header-icons .btn:hover {
   cursor: pointer;
   z-index: 2;
 }
-.close img:active {
-  transform: translateY(-1px);
-}
+
 .noScroll {
   width: 100%;
   height: 100vh;
