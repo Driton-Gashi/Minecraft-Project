@@ -91,6 +91,21 @@ const emptyInputs = () => {
   robotVerification.checked = false;
   errorMessage.textContent = "";
 };
+// Here we will save the users
+const users = [
+  {
+    username: "admin",
+    password: "admin",
+  },
+  {
+    username: "driton",
+    password: "driton",
+  },
+  {
+    username: "shota",
+    password: "shota",
+  },
+];
 
 loginButton.addEventListener("click", () => {
   // if user is registered successfully
@@ -114,7 +129,27 @@ loginButton.addEventListener("click", () => {
 
     // if user is Log in successfully
   } else {
-    console.log("Login was successful");
+    users.forEach((user) => {
+      if (
+        user.username === username.value &&
+        user.password === password.value
+      ) {
+        EmriPerdoruesit = username.value;
+        errorMessage.innerHTML = `<img  width="30px" src="./assets/img/loading.gif" > Welcome back ${EmriPerdoruesit}`;
+        errorMessage.classList.remove("hide");
+        errorMessage.classList.add("welcome");
+        profileOption.classList.remove("hide");
+        document.querySelector(".name").textContent = EmriPerdoruesit;
+        signUpBtn.classList.add("hide");
+        setTimeout(() => {
+          signUpPage.classList.remove("show");
+          document.body.classList.remove("noScroll");
+          errorMessage.innerHTML = "";
+          errorMessage.classList.remove("welcome");
+          emptyInputs();
+        }, 3000);
+      }
+    });
   }
 });
 const validation = (e) => {
@@ -219,8 +254,9 @@ document.body.addEventListener("click", (e) => {
 });
 
 const logOut = () => {
-  if (confirm("Are you sure you want to log out!")) {
-    alert("logged out");
+  if (confirm("You are about to log out! \nare you sure?")) {
+    profileOption.classList.add("hide");
+    signUpBtn.classList.remove("hide");
   }
 };
 const dropdownParent = document.querySelector(".dropdown-parent ");
