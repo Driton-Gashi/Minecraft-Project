@@ -483,6 +483,20 @@ button.wrong-password {
 .dropdown > li:hover {
   background-color: #222;
 }
-/* Sectioni Drijonit, qetu shkrun CSS per Footer*/
-
-/* Sign Up Form per Drijonin */
+.under-construction {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .under-construction {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  div,
+  section,
+  header,
+  footer {
+    display: none !important;
+  }
+}
