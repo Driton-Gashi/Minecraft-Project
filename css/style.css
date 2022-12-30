@@ -39,7 +39,7 @@ header {
   height: 10vh;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
   border-bottom: 2px solid #fff;
-  z-index: 999;
+  z-index: 4;
 }
 .header-aktive {
   background: rgba(17, 17, 17, 0.9);
@@ -187,7 +187,7 @@ header .header-icons .btn:hover {
   backdrop-filter: blur(2px);
 }
 .slideshow .moving {
-  padding: 2em 300px 2em 300px;
+  padding: 2em 300px;
   border-top: 12px dashed green;
   border-bottom: 12px dashed green;
   height: 100%;
@@ -254,25 +254,15 @@ header .header-icons .btn:hover {
   margin-right: -5px;
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
-  background-color: #fa8bff;
-  background-image: linear-gradient(
-    45deg,
-    #fa8bff 0%,
-    #2bd2ff 52%,
-    #2bff88 90%
-  );
+  background-color: #f4d03f;
+  background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
 }
 .slider-btn:last-child {
   margin-right: -5px;
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
-  background-color: #fa8bff;
-  background-image: linear-gradient(
-    315deg,
-    #fa8bff 0%,
-    #2bd2ff 52%,
-    #2bff88 90%
-  );
+  background-color: #f4d03f;
+  background-image: linear-gradient(228deg, #f4d03f 0%, #16a085 100%);
 }
 .slide-box-text {
   color: #fff;
@@ -362,6 +352,7 @@ header .header-icons .btn:hover {
   right: 0;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.9);
+  z-index: 5;
 }
 #sign-up .close img {
   -webkit-filter: invert(100%); /* Safari/Chrome */
