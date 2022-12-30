@@ -18,8 +18,8 @@ html {
 .background {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
-    url(../assets/img/slideshow/171170.jpg);
-  /* background-image: url(../assets/img/slideshow/171170.jpg); */
+    url(../assets/img/background/image-1.jpg);
+  /* background-image: url(../assets/img/icons/slideshow/171170.jpg); */
   background-size: cover !important;
   background-position: center !important;
 }
@@ -184,7 +184,7 @@ header .header-icons .btn:hover {
 .about {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
-    url(../assets/img/slideshow/171197.jpg);
+    url(../assets/img/background/image-2.jpg);
   background-size: cover;
   background-position: center;
   display: flex;

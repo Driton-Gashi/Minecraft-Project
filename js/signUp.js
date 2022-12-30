@@ -94,7 +94,7 @@ loginButton.addEventListener("click", () => {
     console.log("Registration was successful");
 
     EmriPerdoruesit = username.value;
-    errorMessage.innerHTML = `<img  width="30px" src="./assets/img/loading.gif" > Welcome ${EmriPerdoruesit}`;
+    errorMessage.innerHTML = `<img  width="30px" src="./assets/img/icons/loading.gif" > Welcome ${EmriPerdoruesit}`;
     errorMessage.classList.remove("hide");
     errorMessage.classList.add("welcome");
     profileOption.classList.remove("hide");
@@ -116,7 +116,7 @@ loginButton.addEventListener("click", () => {
         user.password === password.value
       ) {
         EmriPerdoruesit = username.value;
-        errorMessage.innerHTML = `<img  width="30px" src="./assets/img/loading.gif" > Welcome back ${EmriPerdoruesit}`;
+        errorMessage.innerHTML = `<img  width="30px" src="./assets/img/icons/loading.gif" > Welcome back ${EmriPerdoruesit}`;
         errorMessage.classList.remove("hide");
         errorMessage.classList.add("welcome");
         profileOption.classList.remove("hide");
