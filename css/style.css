@@ -111,6 +111,17 @@ header .header-icons .btn:hover {
   text-align: center;
   position: relative;
 }
+.status {
+  background-color: #111;
+  color: #fff;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  font-family: myFont;
+  outline: none;
+  cursor: pointer !important;
+  padding: 0.1em 1em;
+}
+
 .profile img {
   width: 40px;
   border-radius: 50%;
@@ -157,6 +168,10 @@ header .header-icons .btn:hover {
 .profile-menu li i {
   color: #fff;
 }
+:root {
+  --selection-background: green;
+}
+
 .profile::after {
   content: " ";
   height: 10px;
@@ -165,7 +180,7 @@ header .header-icons .btn:hover {
   position: absolute;
   top: 4px;
   right: 25px;
-  background-color: green;
+  background: var(--selection-background);
   border-radius: 50%;
 }
 /* Slideshow start */
@@ -187,7 +202,7 @@ header .header-icons .btn:hover {
   backdrop-filter: blur(2px);
 }
 .slideshow .moving {
-  padding: 2em 300px;
+  padding: 2em 0px;
   border-top: 12px dashed green;
   border-bottom: 12px dashed green;
   height: 100%;
@@ -279,7 +294,7 @@ header .header-icons .btn:hover {
   top: 50%;
 }
 .slide-box:hover img {
-  filter: contrast(120%) brightness(50%);
+  filter: contrast(120%) brightness(30%);
 }
 /* Slideshow end */
 

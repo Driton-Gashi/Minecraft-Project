@@ -52,7 +52,8 @@ document.body.addEventListener("click", (e) => {
   if (
     !e.target.classList.contains("profile-menu") &&
     !e.target.parentNode.classList.contains("profile") &&
-    !e.target.parentNode.classList.contains("profile-menu")
+    !e.target.parentNode.classList.contains("profile-menu") &&
+    !e.target.parentNode.classList.contains("status-wrapper")
   )
     profileMenu.classList.add("hide");
 });
@@ -78,3 +79,16 @@ dropdownParent.addEventListener("mouseout", () => {
   dropdownIcon.classList.add("bi-chevron-down");
   dropdownIcon.classList.remove("bi-chevron-up");
 });
+
+// Change profile Status to active, busy or invisible
+const profileStatus = document.querySelector(".status");
+const statusChange = () => {
+  if (profileStatus.value == "active") {
+    profileOption.style.setProperty("--selection-background", "green");
+  } else if (profileStatus.value == "busy") {
+    profileOption.style.setProperty("--selection-background", "red");
+  } else if (profileStatus.value == "invisible") {
+    profileOption.style.setProperty("--selection-background", "white");
+  } else {
+  }
+};

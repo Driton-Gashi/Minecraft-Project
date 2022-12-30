@@ -29,12 +29,18 @@
             <li><a href="#">Showcase</a></li>
             <li class="dropdown-parent"><a href="#">Guide <i class="bi bi-chevron-down dropdown-icon"></i></a>
             <ul class="dropdown hide">
-              <li>Mobs</li>
+              <li onclick="(()=>{
+                window.location = './pages/Mobs.html'
+              })()">Mobs</li>
               <li onclick="(()=>{
                 window.location = './pages/Blocks.html'
               })()">Blocks</li>
-              <li>Foods</li>
-              <li>Biomes</li>
+               <li onclick="(()=>{
+                window.location = './pages/Foods.html'
+              })()">Foods</li>
+               <li onclick="(()=>{
+                window.location = './pages/Biomes.html'
+              })()">Biomes</li>
             </ul>
             </li>
             <li><a href="#">Contact</a></li>
@@ -46,11 +52,17 @@
             <i class="bi bi-volume-mute-fill mute hide"></i>
           
           <div class="btn">Sign Up</div>
-          <div class="profile hide">
+          <div class="profile ">
             <img src="./assets/img/icons/profile-image(default).png" alt="">
           <ul class="profile-menu hide">
             <li><i class="bi bi-person-circle"></i> Edit Profile &ThinSpace; (<span class="name"></span>)</li>
-            <li><i class="bi bi-gear-fill"></i> Settings</li>
+            <li class="status-wrapper"><i class="bi bi-chat-dots"></i>
+               <select title="Change your status" onchange="statusChange()" class="status"  name="" id="">
+
+              <option value="active">Active <span class="dot green"></span></option>
+              <option value="busy">Busy </option>
+              <option value="invisible">Invisible</option>
+            </select></li>
             <li><i class="bi bi-gear-fill"></i> Settings</li>
             <li onclick="logOut()"><i class="bi bi-box-arrow-left"></i> Log Out</li>
           </ul>
