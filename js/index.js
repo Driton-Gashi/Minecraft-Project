@@ -10,6 +10,39 @@ learnMoreBtn.addEventListener("mouseout", () => {
   learnMoreBtn.classList.toggle("about-minecraft-mouseover");
 });
 
+// Slider
+const slider = document.querySelector(".moving");
+const forward = () => {
+  if (slider.classList.contains("forward-1")) {
+    slider.classList.remove("forward-1");
+    slider.classList.add("forward-2");
+  } else if (slider.classList.contains("forward-2")) {
+    slider.classList.remove("forward-2");
+  } else if (slider.classList.length == 1) {
+    slider.classList.add("forward-1");
+  } else if (slider.classList.contains("backward-2")) {
+    slider.classList.remove("backward-2");
+    slider.classList.add("backward-1");
+  } else if (slider.classList.contains("backward-1")) {
+    slider.classList.remove("backward-1");
+  }
+};
+const back = () => {
+  if (slider.classList.contains("forward-1")) {
+    slider.classList.remove("forward-1");
+  } else if (slider.classList.contains("forward-2")) {
+    slider.classList.remove("forward-2");
+    slider.classList.add("forward-1");
+  } else if (slider.classList.length == 1) {
+    slider.classList.add("backward-1");
+  } else if (slider.classList.contains("backward-1")) {
+    slider.classList.remove("backward-1");
+    slider.classList.add("backward-2");
+  } else {
+    slider.classList.remove("backward-2");
+  }
+};
+
 // Main Banner automatic background change effect
 // var mainBanner = document.querySelector(".background");
 // var slideShowImages = ["171170.jpg", "171197.jpg", "171199.jpg"];

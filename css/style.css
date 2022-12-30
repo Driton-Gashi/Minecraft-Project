@@ -39,6 +39,7 @@ header {
   height: 10vh;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
   border-bottom: 2px solid #fff;
+  z-index: 999;
 }
 .header-aktive {
   background: rgba(17, 17, 17, 0.8);
@@ -167,18 +168,115 @@ header .header-icons .btn:hover {
   background-color: green;
   border-radius: 50%;
 }
+/* Slideshow start */
 .background .hero {
   height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .background .hero .slideshow {
-  width: 100%;
-  border: 1px solid #fff;
-
-  height: 50vh;
+  margin-top: 10vh;
+  width: auto;
+  height: 40vh;
+  position: relative;
+  background-color: rgba(10, 10, 10, 0.8);
+  padding-bottom: 2em;
+  padding-top: 2em;
+  border-bottom: 12px dashed green;
+  backdrop-filter: blur(2px);
 }
+.slideshow .moving {
+  padding: 2em 300px;
+  border-top: 12px dashed green;
+
+  height: 100%;
+  display: flex;
+  position: relative;
+  right: 0;
+  transition: 0.5s ease all;
+}
+.moving.forward-1 {
+  right: -350px !important;
+}
+.moving.forward-2 {
+  right: -700px !important;
+}
+.moving.backward-1 {
+  right: 350px !important;
+}
+.moving.backward-2 {
+  right: 700px !important;
+}
+.slide-box {
+  width: 350px;
+  margin: 0 1em;
+  position: relative;
+  font-family: myFont;
+}
+.slide-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease all;
+  filter: contrast(120%);
+}
+.slider-command {
+  position: absolute;
+  color: #fff;
+  left: 50%;
+  bottom: -1.7em;
+  transform: translate(-50%);
+}
+.slider-btn {
+  padding: 1em 2em;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  background: green;
+  color: #fff;
+  transition: 0.1s ease all;
+}
+.slider-btn:hover {
+  background-color: rgb(0, 100, 0);
+}
+.slider-btn i {
+  font-size: 1.5em;
+  display: inline-block;
+  transform: scale(1.5);
+}
+.slider-btn:first-child i {
+  transform: scale(1.5) scaleX(-1);
+}
+.slider-btn:first-child {
+  margin-right: -5px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.slider-btn:last-child {
+  margin-right: -5px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.slide-box-text {
+  color: #fff;
+  position: absolute;
+  font-size: 1.3em;
+  top: 60%;
+  opacity: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.4s ease all;
+}
+.slide-box:hover .slide-box-text {
+  opacity: 1;
+  top: 50%;
+}
+.slide-box:hover img {
+  filter: contrast(120%) brightness(50%);
+}
+/* Slideshow end */
 
 /* about Section */
 .about {
