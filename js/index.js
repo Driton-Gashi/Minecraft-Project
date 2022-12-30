@@ -43,6 +43,8 @@ const back = () => {
   }
 };
 
+setInterval(back, 5000);
+
 // Main Banner automatic background change effect
 // var mainBanner = document.querySelector(".background");
 // var slideShowImages = ["171170.jpg", "171197.jpg", "171199.jpg"];
