@@ -1,0 +1,75 @@
+.background {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
+    url(../assets/img/background/image-1.jpg);
+  /* background-image: url(../assets/img/icons/slideshow/171170.jpg); */
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* about Section */
+.about {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+    url(../assets/img/background/image-2.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  color: #fff;
+}
+.about .about-minecraft {
+  width: 800px;
+  font-family: MyFont;
+  padding-top: 5em;
+}
+.about .about-minecraft h1 {
+  padding: 0.5em 0;
+}
+.video {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  border: 1px solid white;
+  border: 10px solid rgba(0, 0, 0, 0.1);
+}
+
+.about .about-minecraft .btn {
+  display: inline-block;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  width: 200px;
+  background-color: #fff;
+  color: #000;
+  padding: 0.5em 1.5em;
+  margin: 1em 0;
+  border-radius: 3px;
+  font-family: MyFont;
+  cursor: pointer;
+  transition: 0.4s ease all;
+}
+
+.about-minecraft-mouseover {
+  color: lightgreen !important;
+  border-color: lightgreen !important;
+}
+.about .about-minecraft .btn img {
+  margin: 0 10px;
+  position: relative;
+  transition: 0.4s ease all !important;
+  right: 0;
+}
+.about .about-minecraft .btn:hover {
+  background: transparent;
+  color: #fff;
+}
+.about .about-minecraft .btn:hover img {
+  right: -45px;
+}
+.video iframe {
+  border: 10px solid rgba(255, 255, 255, 0.2);
+}

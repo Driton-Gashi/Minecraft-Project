@@ -98,7 +98,7 @@ loginButton.addEventListener("click", () => {
     errorMessage.classList.remove("hide");
     errorMessage.classList.add("welcome");
     profileOption.classList.remove("hide");
-    document.querySelector(".name").textContent = EmriPerdoruesit;
+    document.querySelector(".name").value = EmriPerdoruesit;
     signUpBtn.classList.add("hide");
     setTimeout(() => {
       signUpPage.classList.remove("show");
@@ -108,7 +108,7 @@ loginButton.addEventListener("click", () => {
       emptyInputs();
     }, 3000);
 
-    // if user is Log in successfully
+    // if user is Loged in successfully
   } else {
     users.forEach((user) => {
       if (
@@ -120,7 +120,7 @@ loginButton.addEventListener("click", () => {
         errorMessage.classList.remove("hide");
         errorMessage.classList.add("welcome");
         profileOption.classList.remove("hide");
-        document.querySelector(".name").textContent = EmriPerdoruesit;
+        document.querySelector(".name").value = EmriPerdoruesit;
         signUpBtn.classList.add("hide");
         setTimeout(() => {
           signUpPage.classList.remove("show");

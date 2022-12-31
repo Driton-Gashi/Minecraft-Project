@@ -48,14 +48,25 @@ let EmriPerdoruesit = "";
 profile.addEventListener("click", () => {
   profileMenu.classList.toggle("hide");
 });
+// Nese klikon jasht profile menu automatikisht me e mbyll profile menu
 document.body.addEventListener("click", (e) => {
   if (
     !e.target.classList.contains("profile-menu") &&
     !e.target.parentNode.classList.contains("profile") &&
     !e.target.parentNode.classList.contains("profile-menu") &&
-    !e.target.parentNode.classList.contains("status-wrapper")
-  )
+    !e.target.parentNode.classList.contains("status-wrapper") &&
+    !e.target.parentNode.classList.contains("edit-profile-li")
+  ) {
     profileMenu.classList.add("hide");
+    // nese user e mbyll profile menu gjat editimit me ju rujt t'dhanat
+    inputName.setAttribute("disabled", "");
+    if (inputName.value.length >= 6) {
+      EmriPerdoruesit = inputName.value;
+    } else {
+      inputName.value = EmriPerdoruesit;
+    }
+    inputName.classList.remove("border");
+  }
 });
 
 const logOut = () => {
@@ -92,3 +103,21 @@ const statusChange = () => {
   } else {
   }
 };
+const inputName = document.querySelector(".name");
+const changeName = () => {
+  inputName.removeAttribute("disabled");
+  inputName.focus();
+  inputName.classList.add("border");
+};
+inputName.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    inputName.setAttribute("disabled", "");
+    // Nese useri e vendos emrin ma te shkurt se 6 shkronja ktheja emrin qysh e ka pas
+    if (inputName.value.length >= 6) {
+      EmriPerdoruesit = inputName.value;
+    } else {
+      inputName.value = EmriPerdoruesit;
+    }
+    inputName.classList.remove("border");
+  }
+});

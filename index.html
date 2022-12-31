@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minecraft Project</title>
-    <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" href="./assets/img/icons/favicon.ico" type="image/x-icon">
+    <title>Minecraft Project</title>
+    <link rel="stylesheet" href="./css/homepage.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/slider.css" />
   </head>
   <body>
     <img src="./assets/img/site-under-construction.jpg" alt="" class="under-construction">
@@ -52,10 +54,10 @@
             <i class="bi bi-volume-mute-fill mute hide"></i>
           
           <div class="btn">Sign Up</div>
-          <div class="profile ">
+          <div class="profile hide">
             <img src="./assets/img/icons/profile-image(default).png" alt="">
           <ul class="profile-menu hide">
-            <li><i class="bi bi-person-circle"></i> Edit Profile &ThinSpace; (<span class="name"></span>)</li>
+            <li onclick="changeName()" class="edit-profile-li"><i class="bi bi-person-circle"></i><div class="edit-profile-text-wrapper"> Edit Username &ThinSpace; </div><input title="Press Enter to save changes" disabled class="name" type="text" value="admin"></li>
             <li class="status-wrapper"><i class="bi bi-chat-dots"></i>
                <select title="Change your status" onchange="statusChange()" class="status"  name="" id="">
 
@@ -167,6 +169,7 @@
     </footer>
   </body>
   <script  src="./js/header.js"></script>
-  <script  src="./js/signUp.js"></script>
+  <script  src="./js/sign-up.js"></script>
   <script  src="./js/index.js"></script>
+  <script src="./js/slider.js"></script>
 </html>
