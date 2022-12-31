@@ -10,9 +10,11 @@ signUpBtn.addEventListener("click", () => {
 });
 
 CloseBtn.addEventListener("click", () => {
-  signUpPage.classList.remove("show");
-  document.body.classList.remove("noScroll");
-  emptyInputs();
+  setTimeout(() => {
+    signUpPage.classList.remove("show");
+    document.body.classList.remove("noScroll");
+    emptyInputs();
+  }, 50);
 });
 
 // Login Button Function

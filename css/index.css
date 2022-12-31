@@ -242,6 +242,10 @@ header .header-icons .btn:hover {
   right: 20px;
   cursor: pointer;
   z-index: 2;
+  transition: 0.1s ease all;
+}
+.close img:active {
+  transform: translateY(2px);
 }
 
 .noScroll {
