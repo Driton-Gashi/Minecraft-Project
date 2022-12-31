@@ -1,9 +1,12 @@
 const signUpBtn = document.querySelector(".header-icons .btn");
 const CloseBtn = document.querySelector("#sign-up .close img");
 const signUpPage = document.querySelector("#sign-up");
+
 signUpBtn.addEventListener("click", () => {
-  signUpPage.classList.add("show");
-  document.body.classList.add("noScroll");
+  setTimeout(() => {
+    signUpPage.classList.add("show");
+    document.body.classList.add("noScroll");
+  }, 50);
 });
 
 CloseBtn.addEventListener("click", () => {
