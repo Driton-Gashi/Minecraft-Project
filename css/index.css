@@ -23,7 +23,40 @@ html {
 .hide {
   display: none !important;
 }
+/* On Load Effect*/
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: #283f24; */
+  background-color: #3e5c20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.loader {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
 
+  position: relative;
+  animation: loader 1.5s infinite ease;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* On load effect End */
 header {
   backdrop-filter: blur(5px);
   transition: 0.4s ease all !important;
@@ -93,6 +126,9 @@ header .header-icons .btn {
   display: inline-block;
   position: relative;
   border: 3px solid #fff;
+  transition: 0.3s ease translate;
+  border-bottom: 0;
+  border-right: 0;
 }
 header .header-icons .btn::after {
   content: "";
@@ -105,16 +141,19 @@ header .header-icons .btn::after {
   left: 0px;
   transition: 0.1s ease all;
 }
-.header-icons .btn:active::after {
+.header-icons .btn:hover::after {
   transform: translate(-3px, -3px);
 }
-header.header-aktive .btn {
-  color: green;
-  border-color: green;
+.header-icons .btn:active {
+  transform: translateY(2px);
 }
-
-header .header-icons .btn:hover {
-  border-color: #ffffff;
+header.header-aktive .btn {
+  background-color: #333;
+  color: #fff;
+  border-bottom: 0;
+  border-right: 0;
+  border-top: 3px solid #333;
+  border-left: 3px solid #333;
 }
 
 .profile {
@@ -397,9 +436,15 @@ button.wrong-password {
 
   object-fit: scale-down;
   filter: contrast(150%);
-  animation: ghastMove 7s ease-in-out;
+  animation: ghastMove 12s ease-in-out;
   animation-fill-mode: forwards;
+  transition: 0.4s ease all;
+  cursor: pointer;
 }
+.ghast:hover {
+  filter: drop-shadow(0.5rem 0.5rem 1rem #e23);
+}
+
 .dog-cat {
   position: absolute;
   top: 55%;
