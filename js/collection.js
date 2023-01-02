@@ -1,7 +1,7 @@
 let mobs = [
   {
-    src: "../assets/img/mobs/zombie.png",
-    name: "Zombie",
+    src: "../assets/img/mobs/warden.png",
+    name: "Warden",
     likeNr: Math.floor(Math.random() * 50),
     viewNr: Math.floor(Math.random() * 150),
   },
