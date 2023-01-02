@@ -9,10 +9,9 @@ let mobs = [
 
 let content = document.querySelector(".collection-body");
 let newBox = document.createElement("div");
-
+newBox.classList.add("collection-box");
 mobs.forEach((mob) => {
-  newBox.innerHTML = `<div class="collection-box">
-  <div class="collection-box-body">
+  newBox.innerHTML = `<div class="collection-box-body">
               <img src="${mob.src}" alt="" />
               <h1 class="collection-box-title">${mob.name}</h1>
             </div>
@@ -27,6 +26,6 @@ mobs.forEach((mob) => {
                 ><span class="like-number">&ThinSpace; ${mob.likeNr}</span>
               </span>
             </div>
-            </div>`;
+            `;
   content.appendChild(newBox);
 });
