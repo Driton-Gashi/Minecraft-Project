@@ -4,15 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minecraft Project</title>
-    <link rel="stylesheet" href="../css/style.css" />
     <link
       rel="icon"
       href="../assets/img/icons/favicon.ico"
       type="image/x-icon"
     />
+    <title>Minecraft Project</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/sub-pages.css" />
+    <link rel="stylesheet" href="../css/slider.css" />
   </head>
-  <body>
+  <!-- Loading Effect -->
+  <body class="noScroll">
+    <div class="loader-wrapper">
+      <img
+        src="../assets/img/icons/Minecraft-block.png"
+        alt=""
+        class="loader"
+      />
+      <img src="../assets/img/icons/Minecraft-Logo.png" width="300px" alt="" />
+    </div>
+    <script>
+      window.addEventListener("load", () => {
+        document.querySelector(".loader-wrapper").classList.add("hide");
+        document.body.classList.remove("noScroll");
+      });
+    </script>
+    <!-- Loading Effect end -->
+
+    <!-- Website under Construction image -->
     <img
       src="../assets/img/site-under-construction.jpg"
       alt=""
@@ -36,9 +56,8 @@
         </div>
         <nav>
           <ul class="menu">
-            <li><a href="#top">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#">Showcase</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
             <li class="dropdown-parent">
               <a href="#"
                 >Guide <i class="bi bi-chevron-down dropdown-icon"></i
@@ -123,9 +142,271 @@
           </div>
         </div>
       </header>
-      <div class="hero"></div>
-    </div>
+      <div class="hero">
+        <div class="slideshow">
+          <div class="moving">
+            <div class="slide-box">
+              <img src="" alt="" />
+              <h1 class="slide-box-text">Lorem ipsum dolor sit amet.</h1>
+            </div>
+            <div class="slide-box">
+              <img src="" alt="" />
+              <h1 class="slide-box-text">Lorem ipsum dolor sit amet.</h1>
+            </div>
+            <div class="slide-box">
+              <img src="" alt="" />
+              <h1 class="slide-box-text">Lorem ipsum dolor sit amet.</h1>
+            </div>
+            <div class="slide-box">
+              <img src="" alt="" />
+              <h1 class="slide-box-text">Lorem ipsum dolor sit amet.</h1>
+            </div>
+            <div class="slide-box">
+              <img src="" alt="" />
+              <h1 class="slide-box-text">Lorem ipsum dolor sit amet.</h1>
+            </div>
+            <div class="slide-box">
+              <img src="" alt="" />
+              <h1 class="slide-box-text">Lorem ipsum dolor sit amet.</h1>
+            </div>
+          </div>
+          <div class="slider-command">
+            <button onclick="forward()" class="slider-btn">
+              <i class="bi bi-forward-fill"></i>
+            </button>
 
+            <button onclick="back()" class="slider-btn">
+              <i class="bi bi-forward-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="collection" class="collection">
+      <h1 class="collection-title">Mob Collection</h1>
+      <div class="collection-content">
+        <div class="collection-header">
+          <div class="collection-buttons-wrapper">
+            <button class="collection-btn">Lorem.</button>
+            <button class="collection-btn">Lorem.</button>
+            <button class="collection-btn">Lorem.</button>
+            <button class="collection-btn">Lorem.</button>
+          </div>
+          <div class="collection-search-wrapper">
+            <input
+              type="text"
+              class="collection-search-input"
+              placeholder="Search Mob"
+            />
+            <button class="collection-search-btn">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </div>
+        <div class="collection-body">
+          <!-- start -->
+          <!-- Line 1 -->
+          <div class="collection-box">
+            <div class="collection-box-body">
+              <img src="../assets/img/icons/Minecraft-block.png" alt="" />
+              <h1 class="collection-box-title">Lorem ipsum dolor sit.</h1>
+            </div>
+            <div class="collection-box-footer">
+              <span class="view-wrapper"
+                ><i class="bi bi-eye-fill"></i>
+                <span class="view-number">&ThinSpace;?</span>
+              </span>
+
+              <span class="like-wrapper"
+                ><i class="bi bi-suit-heart"></i
+                ><span class="like-number">&ThinSpace; ?</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="collection-box">
+            <div class="collection-box-body">
+              <img src="../assets/img/icons/Minecraft-block.png" alt="" />
+              <h1 class="collection-box-title">Lorem ipsum dolor sit.</h1>
+            </div>
+            <div class="collection-box-footer">
+              <span class="view-wrapper"
+                ><i class="bi bi-eye-fill"></i>
+                <span class="view-number">&ThinSpace;?</span>
+              </span>
+
+              <span class="like-wrapper"
+                ><i class="bi bi-suit-heart"></i
+                ><span class="like-number">&ThinSpace; ?</span>
+              </span>
+            </div>
+          </div> <div class="collection-box">
+            <div class="collection-box-body">
+              <img src="../assets/img/icons/Minecraft-block.png" alt="" />
+              <h1 class="collection-box-title">Lorem ipsum dolor sit.</h1>
+            </div>
+            <div class="collection-box-footer">
+              <span class="view-wrapper"
+                ><i class="bi bi-eye-fill"></i>
+                <span class="view-number">&ThinSpace;?</span>
+              </span>
+
+              <span class="like-wrapper"
+                ><i class="bi bi-suit-heart"></i
+                ><span class="like-number">&ThinSpace; ?</span>
+              </span>
+            </div>
+          </div> <div class="collection-box">
+            <div class="collection-box-body">
+              <img src="../assets/img/icons/Minecraft-block.png" alt="" />
+              <h1 class="collection-box-title">Lorem ipsum dolor sit.</h1>
+            </div>
+            <div class="collection-box-footer">
+              <span class="view-wrapper"
+                ><i class="bi bi-eye-fill"></i>
+                <span class="view-number">&ThinSpace;?</span>
+              </span>
+
+              <span class="like-wrapper"
+                ><i class="bi bi-suit-heart"></i
+                ><span class="like-number">&ThinSpace; ?</span>
+              </span>
+            </div>
+          </div> <div class="collection-box">
+            <div class="collection-box-body">
+              <img src="../assets/img/icons/Minecraft-block.png" alt="" />
+              <h1 class="collection-box-title">Lorem ipsum dolor sit.</h1>
+            </div>
+            <div class="collection-box-footer">
+              <span class="view-wrapper"
+                ><i class="bi bi-eye-fill"></i>
+                <span class="view-number">&ThinSpace;?</span>
+              </span>
+
+              <span class="like-wrapper"
+                ><i class="bi bi-suit-heart"></i
+                ><span class="like-number">&ThinSpace; ?</span>
+              </span>
+            </div>
+          </div> <div class="collection-box">
+            <div class="collection-box-body">
+              <img src="../assets/img/icons/Minecraft-block.png" alt="" />
+              <h1 class="collection-box-title">Lorem ipsum dolor sit.</h1>
+            </div>
+            <div class="collection-box-footer">
+              <span class="view-wrapper"
+                ><i class="bi bi-eye-fill"></i>
+                <span class="view-number">&ThinSpace;?</span>
+              </span>
+
+              <span class="like-wrapper"
+                ><i class="bi bi-suit-heart"></i
+                ><span class="like-number">&ThinSpace; ?</span>
+              </span>
+            </div>
+          </div> <div class="collection-box">
+            <div class="collection-box-body">
+              <img src="../assets/img/icons/Minecraft-block.png" alt="" />
+              <h1 class="collection-box-title">Lorem ipsum dolor sit.</h1>
+            </div>
+            <div class="collection-box-footer">
+              <span class="view-wrapper"
+                ><i class="bi bi-eye-fill"></i>
+                <span class="view-number">&ThinSpace;?</span>
+              </span>
+
+              <span class="like-wrapper"
+                ><i class="bi bi-suit-heart"></i
+                ><span class="like-number">&ThinSpace; ?</span>
+              </span>
+            </div>
+          </div> <div class="collection-box">
+            <div class="collection-box-body">
+              <img src="../assets/img/icons/Minecraft-block.png" alt="" />
+              <h1 class="collection-box-title">Lorem ipsum dolor sit.</h1>
+            </div>
+            <div class="collection-box-footer">
+              <span class="view-wrapper"
+                ><i class="bi bi-eye-fill"></i>
+                <span class="view-number">&ThinSpace;?</span>
+              </span>
+
+              <span class="like-wrapper"
+                ><i class="bi bi-suit-heart"></i
+                ><span class="like-number">&ThinSpace; ?</span>
+              </span>
+            </div>
+          </div> <div class="collection-box">
+            <div class="collection-box-body">
+              <img src="../assets/img/icons/Minecraft-block.png" alt="" />
+              <h1 class="collection-box-title">Lorem ipsum dolor sit.</h1>
+            </div>
+            <div class="collection-box-footer">
+              <span class="view-wrapper"
+                ><i class="bi bi-eye-fill"></i>
+                <span class="view-number">&ThinSpace;?</span>
+              </span>
+
+              <span class="like-wrapper"
+                ><i class="bi bi-suit-heart"></i
+                ><span class="like-number">&ThinSpace; ?</span>
+              </span>
+            </div>
+          </div> <div class="collection-box">
+            <div class="collection-box-body">
+              <img src="../assets/img/icons/Minecraft-block.png" alt="" />
+              <h1 class="collection-box-title">Lorem ipsum dolor sit.</h1>
+            </div>
+            <div class="collection-box-footer">
+              <span class="view-wrapper"
+                ><i class="bi bi-eye-fill"></i>
+                <span class="view-number">&ThinSpace;?</span>
+              </span>
+
+              <span class="like-wrapper"
+                ><i class="bi bi-suit-heart"></i
+                ><span class="like-number">&ThinSpace; ?</span>
+              </span>
+            </div>
+          </div> <div class="collection-box">
+            <div class="collection-box-body">
+              <img src="../assets/img/icons/Minecraft-block.png" alt="" />
+              <h1 class="collection-box-title">Lorem ipsum dolor sit.</h1>
+            </div>
+            <div class="collection-box-footer">
+              <span class="view-wrapper"
+                ><i class="bi bi-eye-fill"></i>
+                <span class="view-number">&ThinSpace;?</span>
+              </span>
+
+              <span class="like-wrapper"
+                ><i class="bi bi-suit-heart"></i
+                ><span class="like-number">&ThinSpace; ?</span>
+              </span>
+            </div>
+          </div> <div class="collection-box">
+            <div class="collection-box-body">
+              <img src="../assets/img/icons/Minecraft-block.png" alt="" />
+              <h1 class="collection-box-title">Lorem ipsum dolor sit.</h1>
+            </div>
+            <div class="collection-box-footer">
+              <span class="view-wrapper"
+                ><i class="bi bi-eye-fill"></i>
+                <span class="view-number">&ThinSpace;?</span>
+              </span>
+
+              <span class="like-wrapper"
+                ><i class="bi bi-suit-heart"></i
+                ><span class="like-number">&ThinSpace; ?</span>
+              </span>
+            </div>
+          </div>
+
+          
+          
+        <!-- end -->
+      </div>
+    </div>
     <!-- Sign Up Section -->
     <section id="sign-up" class="">
       <div class="close">
@@ -173,5 +454,6 @@
     </footer>
   </body>
   <script src="../js/header.js"></script>
-  <script src="../js/signUp.js"></script>
+  <script src="../js/sign-up.js"></script>
+  <script src="../js/slider.js"></script>
 </html>
