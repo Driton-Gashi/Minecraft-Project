@@ -130,7 +130,7 @@
   width: 100%;
   transform: translate(-50%);
   text-align: center;
-  padding-bottom: 0.5em;
+  padding: 0.5em;
   font-family: myFont;
   font-weight: lighter;
 }
