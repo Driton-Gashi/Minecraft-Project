@@ -1,6 +1,6 @@
 let tools = [
   {
-    src: "../assets/img/mobs/zombie.png",
+    src: "../assets/img/mobs/apple.png",
     name: "Zombie",
     likeNr: Math.floor(Math.random() * 50),
     viewNr: Math.floor(Math.random() * 150),
