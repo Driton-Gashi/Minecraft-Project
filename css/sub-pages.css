@@ -19,7 +19,7 @@
   font-family: myFont;
   font-size: 3em;
   padding: 1em;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 .collection-content {
   height: auto;
@@ -103,6 +103,7 @@
 .collection-box img {
   width: 50%;
   object-fit: cover;
+  filter: contrast(120%);
 }
 .collection-box-body {
   display: flex;
@@ -121,7 +122,7 @@
 }
 .collection-box-title {
   color: #fff;
-  font-size: 1em;
+  font-size: 0.9em;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -129,5 +130,10 @@
   width: 100%;
   transform: translate(-50%);
   text-align: center;
-  padding: 0.2em;
+  padding-bottom: 0.5em;
+  font-family: myFont;
+  font-weight: lighter;
+}
+.collection-box-footer i {
+  cursor: pointer;
 }

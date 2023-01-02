@@ -38,6 +38,11 @@ html {
   align-items: center;
   z-index: 999;
 }
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .loader {
   display: inline-block;
   width: 150px;
@@ -436,7 +441,7 @@ button.wrong-password {
 
   object-fit: scale-down;
   filter: contrast(150%);
-  animation: ghastMove 12s ease-in-out;
+  animation: ghastMove 8s ease-in-out;
   animation-fill-mode: forwards;
   transition: 0.4s ease all;
   cursor: pointer;

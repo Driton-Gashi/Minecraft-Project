@@ -105,6 +105,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 0.4s ease all;
+  text-align: center;
 }
 .slide-box:hover .slide-box-text {
   opacity: 1;
