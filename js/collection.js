@@ -4,7 +4,13 @@ let mobs = [
     name: "Zombie",
     likeNr: Math.floor(Math.random() * 50),
     viewNr: Math.floor(Math.random() * 150),
-  },
+  },  {
+    src: "../assets/img/mobs/evoker.png",
+    name: "Warden",
+    likeNr: Math.floor(Math.random() * 50),
+    viewNr: Math.floor(Math.random() * 150),
+  }
+
 ];
 
 let content = document.querySelector(".collection-body");
