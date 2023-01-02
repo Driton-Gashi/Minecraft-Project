@@ -92,3 +92,6 @@ mobs.forEach((mob) => {
             `;
   content.appendChild(newBox);
 });
+
+
+
