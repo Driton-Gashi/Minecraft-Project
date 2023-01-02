@@ -1,7 +1,7 @@
 let mobs = [
   {
-    src: "../assets/img/mobs/warden.png",
-    name: "Warden",
+    src: "../assets/img/mobs/zombie.png",
+    name: "Zombie",
     likeNr: Math.floor(Math.random() * 50),
     viewNr: Math.floor(Math.random() * 150),
   },
@@ -11,7 +11,8 @@ let content = document.querySelector(".collection-body");
 let newBox = document.createElement("div");
 newBox.classList.add("collection-box");
 mobs.forEach((mob) => {
-  newBox.innerHTML = `<div class="collection-box-body">
+  newBox.innerHTML = `
+            <div class="collection-box-body">
               <img src="${mob.src}" alt="" />
               <h1 class="collection-box-title">${mob.name}</h1>
             </div>
