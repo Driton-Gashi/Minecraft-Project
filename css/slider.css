@@ -9,7 +9,7 @@
 .background .hero .slideshow {
   margin-top: 10vh;
   width: auto;
-  padding: 2em 0;
+  padding: 1em 0;
   height: 45vh;
   position: relative;
   background-color: rgba(17, 17, 17, 0.8);
@@ -17,9 +17,9 @@
   backdrop-filter: blur(2px);
 }
 .slideshow .moving {
-  padding: 2em 250px;
-  border-top: 12px dashed green;
-  border-bottom: 12px dashed green;
+  padding: 1.5em 250px;
+  border-top: 10px dashed green;
+  border-bottom: 10px dashed green;
   height: 100%;
   display: flex;
   justify-content: start;
@@ -56,7 +56,7 @@
   position: absolute;
   color: #fff;
   left: 50%;
-  bottom: -2em;
+  bottom: -4em;
   transform: translate(-50%);
 }
 .slider-btn {

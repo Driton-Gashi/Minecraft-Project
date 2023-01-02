@@ -90,20 +90,27 @@
   padding-top: 2em;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 .collection-box {
   width: 200px;
   height: 200px;
-  margin: 1em;
+  margin: 2em 1em;
   background-color: #111;
-  border: 1px solid #222;
   border-radius: 5px;
+  border: 1px solid #222;
+  border-bottom: 0;
+  cursor: pointer;
+}
+.collection-box:hover img {
+  filter: drop-shadow(0.5rem 0.5rem 1rem green);
 }
 .collection-box img {
   width: 50%;
   object-fit: cover;
   filter: contrast(120%);
+  transition: 0.1s ease all;
+  filter: drop-shadow(0.5rem 0.5rem 1rem transparent);
 }
 .collection-box-body {
   display: flex;
@@ -119,7 +126,9 @@
   justify-content: space-around;
   align-items: center;
   color: green;
-  border-top: 1px solid #222;
+  border: 1px solid #222;
+  border-top: 0;
+  background-color: #222;
 }
 .collection-box-title {
   color: #fff;
