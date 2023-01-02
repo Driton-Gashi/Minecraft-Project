@@ -52,3 +52,20 @@ hearts.forEach((heart) => {
     }
   });
 });
+
+// Search function
+const searchInput = document.querySelector(".collection-search-input");
+const searchBtn = document.querySelector(".collection-search-btn");
+searchBtn.addEventListener("click", () => {
+  let text = searchInput.value.toLowerCase();
+  let boxes = document.querySelectorAll(".collection-box");
+
+  Array.from(boxes).forEach((box) => {
+    let boxName = box.childNodes[1].childNodes[3].textContent;
+    if (boxName.toLocaleLowerCase().indexOf(text) != -1) {
+      box.style.display = "block";
+    } else {
+      box.style.display = "none";
+    }
+  });
+});
