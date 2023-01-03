@@ -1,7 +1,67 @@
 let tools = [
   {
-    src: "../assets/img/mobs/apple.png",
+    src: "../assets/img/tools/diamond sword.png",
     name: "Zombie",
+    likeNr: Math.floor(Math.random() * 50),
+    viewNr: Math.floor(Math.random() * 150),
+  },
+  {
+    src: "../assets/img/tools/golden sword.png",
+    name: "Gold Sword",
+    likeNr: Math.floor(Math.random() * 50),
+    viewNr: Math.floor(Math.random() * 150),
+  },
+  {
+    src: "../assets/img/tools/diamond hoe.png",
+    name: "Diamond Hoe",
+    likeNr: Math.floor(Math.random() * 50),
+    viewNr: Math.floor(Math.random() * 150),
+  },
+  {
+    src: "../assets/img/tools/gold hoe.png",
+    name: "Gold Hoe",
+    likeNr: Math.floor(Math.random() * 50),
+    viewNr: Math.floor(Math.random() * 150),
+  },
+  {
+    src: "../assets/img/tools/diamond pickaxe.png",
+    name: "Diamond Pickaxe",
+    likeNr: Math.floor(Math.random() * 50),
+    viewNr: Math.floor(Math.random() * 150),
+  },
+  {
+    src: "../assets/img/tools/gold pickaxe.png",
+    name: "Gold Pickaxe",
+    likeNr: Math.floor(Math.random() * 50),
+    viewNr: Math.floor(Math.random() * 150),
+  },
+  {
+    src: "../assets/img/tools/diamond axe.png",
+    name: "Diamond Axe",
+    likeNr: Math.floor(Math.random() * 50),
+    viewNr: Math.floor(Math.random() * 150),
+  },
+  {
+    src: "../assets/img/tools/gold axe.png",
+    name: "Gold Axe",
+    likeNr: Math.floor(Math.random() * 50),
+    viewNr: Math.floor(Math.random() * 150),
+  },
+  {
+    src: "../assets/img/tools/diamond shovel.png",
+    name: "Diamond Shovel",
+    likeNr: Math.floor(Math.random() * 50),
+    viewNr: Math.floor(Math.random() * 150),
+  },
+  {
+    src: "../assets/img/tools/gold shovel.png",
+    name: "Gold Shovel",
+    likeNr: Math.floor(Math.random() * 50),
+    viewNr: Math.floor(Math.random() * 150),
+  },
+  {
+    src: "../assets/img/tools/fishing.png",
+    name: "Fishing Rod",
     likeNr: Math.floor(Math.random() * 50),
     viewNr: Math.floor(Math.random() * 150),
   },
