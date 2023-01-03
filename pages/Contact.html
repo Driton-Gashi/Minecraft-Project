@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="../assets/img/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Minecraft Project</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/sub-pages.css" />
+    <link rel="stylesheet" href="../css/slider.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+  </head>
+  <!-- Loading Effect -->
+  <body class="noScroll">
+    <div class="loader-wrapper">
+      <img
+        src="../assets/img/icons/Minecraft-block.png"
+        alt=""
+        class="loader"
+      />
+      <img src="../assets/img/icons/Minecraft-Logo.png" width="300px" alt="" />
+    </div>
+    <script>
+      window.addEventListener("load", () => {
+        document.querySelector(".loader-wrapper").classList.add("hide");
+        document.body.classList.remove("noScroll");
+      });
+    </script>
+    <!-- Loading Effect end -->
+
+    <!-- Website under Construction image -->
+    <img
+      src="../assets/img/site-under-construction.jpg"
+      alt=""
+      class="under-construction"
+    />
+    <!--Shto autoplay tek audio per mu dhez muzika vet  -->
+    <audio loop class="minecraft-audio">
+      <source src="../assets/audio/Minecraft-Theme-Song.mp3" type="audio/mp3" />
+    </audio>
+
+    <div class="background">
+      <header>
+        <div class="logo">
+          <a href="../index.html">
+            <img
+              width="130px"
+              src="../assets/img/icons/Minecraft-Logo.png"
+              alt=""
+            />
+          </a>
+        </div>
+        <nav>
+          <ul class="menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li class="dropdown-parent">
+              <a href="#"
+                >Guide <i class="bi bi-chevron-down dropdown-icon"></i
+              ></a>
+              <ul class="dropdown hide">
+                <li
+                  onclick="(()=>{
+                window.location = '../pages/Mobs.html'
+              })()"
+                >
+                  Mobs
+                </li>
+                <li
+                  onclick="(()=>{
+                window.location = '../pages/Blocks.html'
+              })()"
+                >
+                  Blocks
+                </li>
+                <li
+                  onclick="(()=>{
+                window.location = '../pages/Foods.html'
+              })()"
+                >
+                  Foods
+                </li>
+                <li
+                  onclick="(()=>{
+                window.location = '../pages/Blocks.html'
+              })()"
+                >
+                  Blocks
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-icons">
+          <i class="bi bi-volume-up-fill unMute"></i>
+
+          <i class="bi bi-volume-mute-fill mute hide"></i>
+
+          <div class="btn">Sign Up</div>
+          <div class="profile hide">
+            <img src="../assets/img/icons/profile-image(default).png" alt="" />
+            <ul class="profile-menu hide">
+              <li onclick="changeName()" class="edit-profile-li">
+                <i class="bi bi-person-circle"></i>
+                <div class="edit-profile-text-wrapper">
+                  Edit Username &ThinSpace;
+                </div>
+                <input
+                  title="Press Enter to save changes"
+                  disabled
+                  class="name"
+                  type="text"
+                  value="admin"
+                />
+              </li>
+              <li class="status-wrapper">
+                <i class="bi bi-chat-dots"></i>
+                <select
+                  title="Change your status"
+                  onchange="statusChange()"
+                  class="status"
+                  name=""
+                  id=""
+                >
+                  <option value="active">
+                    Active <span class="dot green"></span>
+                  </option>
+                  <option value="busy">Busy</option>
+                  <option value="invisible">Invisible</option>
+                </select>
+              </li>
+              <li><i class="bi bi-gear-fill"></i> Settings</li>
+              <li onclick="logOut()">
+                <i class="bi bi-box-arrow-left"></i> Log Out
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+     <body>
+        <div class="container">
+            <div class="content">
+              <div class="left-side">
+                <div class="address details">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div class="topic">Address</div>
+                  <div class="text-one">lorem.</div>
+                  <div class="text-two">lorem.</div>
+                </div>
+                <div class="phone details">
+                  <i class="fas fa-phone-alt"></i>
+                  <div class="topic">Phone</div>
+                  <div class="text-one">045 *** ***</div>
+                  <div class="text-two">049 *** ***</div>
+                </div>
+                <div class="email details">
+                  <i class="fas fa-envelope"></i>
+                  <div class="topic">Email</div>
+                  <div class="text-one">contact@gmail.com</div>
+                  <div class="text-two">info.minecraft@gmail.com</div>
+                </div>
+              </div>
+              <div class="right-side">
+                <div class="topic-text">Subcribe for Updates</div>
+              <form action="#">
+                <div class="input-box">
+                  <input type="text" placeholder="Enter your name">
+                </div>
+                <div class="input-box">
+                  <input type="text" placeholder="Enter your email">
+                </div>
+                <div class="input-box message-box">
+                    <input type="text" placeholder="Text">
+                  
+                </div>
+                <div class="button">
+                  <input type="button" value="Send Now" >
+                </div>
+              </form>
+            </div>
+            </div>
+          </div>
+
+    <!-- Section i Drijonit -->
+    <footer>
+      <!-- Prej qe tu ja fillon me shkru HTML -->
+      
+    </footer>
+  </body>
+  <script src="../js/header.js"></script>
+  <script src="../js/sign-up.js"></script>
+  <script src="../js/slider.js"></script>
+  <script src="../js/blocks-data.js"></script>
+</html>
