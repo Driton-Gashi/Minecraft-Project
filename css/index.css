@@ -534,16 +534,20 @@ button.wrong-password {
 }
 .before-footer img:hover {
   transform: translateY(-5px);
-  filter: contrast(120%) brightness(130%);
 }
 /* Footer */
 footer {
   color: #fff;
-  background: linear-gradient(360deg, rgba(17, 17, 17, 0), rgba(17, 17, 17, 1)),
+  background: linear-gradient(
+      360deg,
+      rgba(17, 17, 17, 0.3),
+      rgba(17, 17, 17, 1)
+    ),
     url(../assets/img/background/footer-3.jpg);
   font-family: myFont;
   background-size: cover;
   background-position: bottom;
+  position: relative;
 }
 .footer-blur {
   padding: 6em 3em;
@@ -594,6 +598,8 @@ footer {
 .copyright {
   font-size: 1em;
   color: #fff;
+  position: absolute;
+  bottom: 1em;
 }
 .footer-section img {
   margin-top: -2em;
