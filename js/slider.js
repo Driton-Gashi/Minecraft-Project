@@ -16,7 +16,7 @@ const forward = () => {
     slider.classList.remove("backward-1");
   }
   clearInterval(automaticSliderInterval);
-  automaticSliderInterval = setInterval(automaticSlider, 5000);
+  automaticSliderInterval = setInterval(automaticSlider, 3000);
 };
 const back = () => {
   if (slider.classList.contains("forward-1")) {
@@ -33,7 +33,7 @@ const back = () => {
     slider.classList.remove("backward-2");
   }
   clearInterval(automaticSliderInterval);
-  automaticSliderInterval = setInterval(automaticSlider, 5000);
+  automaticSliderInterval = setInterval(automaticSlider, 3000);
 };
 const automaticSlider = () => {
   if (slider.classList.contains("forward-2")) {
@@ -51,4 +51,4 @@ const automaticSlider = () => {
     slider.classList.add("forward-2");
   }
 };
-let automaticSliderInterval = setInterval(automaticSlider, 5000);
+let automaticSliderInterval = setInterval(automaticSlider, 3000);
