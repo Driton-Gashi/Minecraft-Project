@@ -518,7 +518,57 @@ button.wrong-password {
 .under-construction {
   display: none;
 }
+/* Footer */
+footer {
+  color: #fff;
+  padding: 3em 0;
+  background: #222;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.footer-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-bottom: 50px;
+}
+
+.footer-section {
+  flex: 0 0 200px;
+  margin-right: 50px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section li {
+  margin: 10px 0;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #eee;
+}
+
+.footer-bottom {
+  display: flex;
+}
 /* Website blocked in devices smaller than 1024px */
 @media (max-width: 1024px) {
   .under-construction {

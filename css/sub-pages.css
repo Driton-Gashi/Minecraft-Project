@@ -97,7 +97,8 @@
   height: 200px;
   margin: 2em 1em;
   background-color: #111;
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   border: 1px solid #222;
   border-bottom: 0;
   cursor: pointer;
@@ -129,6 +130,8 @@
   border: 1px solid #222;
   border-top: 0;
   background-color: #222;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .collection-box-title {
   color: #fff;
