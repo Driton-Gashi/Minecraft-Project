@@ -73,7 +73,7 @@
 .video iframe {
   border: 10px solid rgba(255, 255, 255, 0.2);
 }
-
+/* Contact Form */
 .contact {
   min-height: 100vh;
   background: linear-gradient(rgba(17, 17, 17, 0), rgba(17, 17, 17, 1)),
@@ -84,27 +84,33 @@
   justify-content: center;
   align-items: center;
   color: #fff;
+  position: relative;
 }
 .form-wrapper {
   width: 60%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.contact-title {
+  font-size: 3em;
+  font-family: myFont;
 }
 .form-wrapper form {
   color: #fff;
   background-color: rgba(17, 17, 17, 0.9);
-  min-height: 350px;
-  width: 450px;
+  min-height: 500px;
+  width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  border-radius: 6px;
+  border-radius: 10px;
   padding: 2em 0;
 }
 .form-wrapper form .center {
-  padding-top: 2em;
+  padding-top: 1em;
   width: 70%;
   font-family: myFont;
 }
@@ -128,6 +134,8 @@
 .form-wrapper .username,
 .form-wrapper .email,
 .form-wrapper .message {
+  font-size: 1em;
+  font-family: myFont;
   width: 100%;
   padding: 0.7em;
   margin-bottom: 1em;
