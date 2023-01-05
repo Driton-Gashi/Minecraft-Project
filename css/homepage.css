@@ -114,7 +114,18 @@
   width: 70%;
   font-family: myFont;
 }
-.form-wrapper form > img {
+.contact-us {
+  font-family: myFont;
+  width: 100%;
+  text-align: center;
+  font-size: 3.5em;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  object-fit: scale-down;
+  transform: translate(-50%, -50%);
+}
+/* .form-wrapper form > img {
   width: 250px;
   position: absolute;
   top: 1%;
@@ -122,7 +133,7 @@
   object-fit: scale-down;
   transform: translate(-50%, -50%);
   filter: contrast(130%);
-}
+} */
 .username-label,
 .email-label,
 .message-label {
@@ -144,8 +155,8 @@
   color: black;
 }
 .form-wrapper button {
-  padding: 0.6em 2em;
-  font-size: 1em;
+  padding: 0.5em 2em;
+  font-size: 1.3em;
   font-family: myFont;
   font-weight: lighter;
   background-color: green;
