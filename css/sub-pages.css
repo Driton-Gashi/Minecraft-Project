@@ -94,7 +94,7 @@
 }
 .collection-box {
   width: 200px;
-  height: 200px;
+  height: 250px;
   margin: 2em 1em;
   background-color: #111;
   border-top-left-radius: 5px;
@@ -107,8 +107,9 @@
   filter: drop-shadow(0.5rem 0.5rem 1rem green);
 }
 .collection-box img {
+  height: 150px;
   width: 50%;
-  object-fit: cover;
+  object-fit: scale-down;
   filter: contrast(120%);
   transition: 0.1s ease all;
   filter: drop-shadow(0.5rem 0.5rem 1rem transparent);
@@ -135,7 +136,7 @@
 }
 .collection-box-title {
   color: #fff;
-  font-size: 0.9em;
+  font-size: 1em;
   position: absolute;
   bottom: 0;
   left: 0;
