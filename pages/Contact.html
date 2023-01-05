@@ -167,17 +167,17 @@
                 <div class="topic-text">Contact Us</div>
               <form action="#">
                 <div class="input-box">
-                  <input type="text" placeholder="Enter your name">
+                  <input type="text" name="name" required placeholder="Your Name" id="name">
                 </div>
                 <div class="input-box">
-                  <input type="text" placeholder="Enter your email">
+                  <input type="email" name="email" required placeholder="Email Address" id="email">
                 </div>
                 <div class="input-box message-box">
-                    <input type="text" placeholder="Text">
+                  <textarea placeholder="Your Message" class="form-control" name="message" rows="6" required id="text-area"></textarea>
                   
                 </div>
                 <div class="button">
-                  <input type="button" value="Send Now" >
+                  <button type="submit" id="btn">Send</button>
                 </div>
               </form>
             </div>

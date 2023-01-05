@@ -88,7 +88,7 @@
   background-color: #f0f1f8;
   padding-bottom: 70px;
 }
-.right-side .input-box textarea {
+ .textarea {
   padding-top: 6px;
 }
 .right-side .button {
@@ -106,8 +106,18 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.button input[type="button"]:hover {
-  background: #5029bc;
+.button{
+  border: none;
+  width: 100px;
+  height: 50px;
+  font-size: 2em;
+  cursor: pointer;
+}
+.button :hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  transform: scale(1.1);
+
+  
 }
 
 @media (max-width: 950px) {
