@@ -55,7 +55,7 @@
               })()">Tools</li>
             </ul>
             </li>
-            <li><a href="./pages/Contact.html">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
         <div class="header-icons">
@@ -135,44 +135,38 @@
         <iframe  width="800" height="350" src="https://www.youtube.com/embed/MmB9b5njVbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </section>
+    <section class="contact" id="contact">
+      <div class="form-wrapper">
+        <form action="https://formsubmit.co/dritongashi1995@gmail.com" method="POST">
+          <img  src="./assets/img/icons/Minecraft-Logo.png" alt="">
+          
+          <div class="center">
+            <!-- <h1 class="username-label">Username</h1>
+              <input  class="username" type="text" > -->
+            
+           <input type="hidden" name="_subject" value="Message From Your Website">
+           
+           <h1 class="username-label">Name</h1>
+           <input class="username" type="text" name="name" required placeholder="Your Name" id="name">
 
-    <!-- Sign Up Section -->
-    <section id="sign-up" class="">
-      <div class="close">
-        <img src="./assets/img/icons/minecraft-close-icon.svg" alt="">
+           <h1 class="email-label">Email</h1>
+           <input class="email" type="email" name="email" required placeholder="Email Address" id="email">
+           
+           <input type="hidden" name="_next" value="https://dritoni-shota.app/">
+           
+           <h1 class="message-label">Message</h1>
+           <textarea class="message" placeholder="Your Message" class="form-control" name="message" rows="6" required id="text-area"></textarea>
+           <input type="hidden" name="_autoresponse" value="Ne sapo morrem mesazhin tuaj dhe do ju pergjigjemi se shpejti">
+           <input type="hidden" name="_template" value="table">
+           <input type="hidden" name="_cc" value="azem.gashi2002@gmail.com">
+           <input type="hidden" name="_subject" value="Message from you Minecraft Website">
+           <input type="hidden" name="_captcha" value="false">
+           <button class="contact-btn" type="submit" id="btn">Send</button>
+          </div>
+        </form>
       </div>
-      <section class="sign-up-wrapper">
-        <div class="sign-up-form">
-<!-- qetu e qet Sign Up form -->
-          <form>
-            <img  src="./assets/img/icons/Minecraft-Logo.png" alt="">
-            <div class="center">
-
-              <h1 class="username-label">Username</h1>
-              <input  class="username" type="text" >
-
-              <h1 class="password-label">Password</h1>
-              <input  type="password" class="password" >
-
-              <h1 class="confirm-password-label hide">Confirm password</h1>
-              <input  type="password" class="confirm-password hide" >
-
-              <div class="keep-me-logged-in"><input type="checkbox" >I'm not a robot </div>
-              <div class="validation-message"></div>
-              <button type="button" >Login</button>
-              <h1 class="register-message"><span class="haveAccount">Don't have an account</span> <span class="register-message-btn">register</span></h1>
-            </div>
-          </form>
-        </div>
-        <div class="sign-up-img">
-          <img class="ghast" src="./assets/img/icons/ghast.gif" alt="">
-          <img class="sign-up-image" src="./assets/img/mobs/Enderman.webp" alt="">
-          <!-- <img class="sheep" src="./assets/img/icons/sheep.gif" alt=""> -->
-          <!-- <img class="mushroom" src="./assets/img/icons/mushroom.png" alt=""> -->
-          <!-- <img class="dog-cat" src="./assets/img/icons/dog&cat.gif" alt=""> -->
-        </div>
-      </section>
     </section>
+   
 <div class="before-footer">
   <img src="./assets/img/blocks/dirt.png" alt="">
   <img src="./assets/img/blocks/emerald.png" alt="">
@@ -216,7 +210,44 @@
       </div>
     </div>
     </footer>
-    
+
+     <!-- Sign Up Section -->
+     <section id="sign-up" class="">
+      <div class="close">
+        <img src="./assets/img/icons/minecraft-close-icon.svg" alt="">
+      </div>
+      <section class="sign-up-wrapper">
+        <div class="sign-up-form">
+<!-- qetu e qet Sign Up form -->
+          <form>
+            <img  src="./assets/img/icons/Minecraft-Logo.png" alt="">
+            <div class="center">
+
+              <h1 class="username-label">Username</h1>
+              <input  class="username" type="text" >
+
+              <h1 class="password-label">Password</h1>
+              <input  type="password" class="password" >
+
+              <h1 class="confirm-password-label hide">Confirm password</h1>
+              <input  type="password" class="confirm-password hide" >
+
+              <div class="keep-me-logged-in"><input type="checkbox" >I'm not a robot </div>
+              <div class="validation-message"></div>
+              <button type="button" >Login</button>
+              <h1 class="register-message"><span class="haveAccount">Don't have an account</span> <span class="register-message-btn">register</span></h1>
+            </div>
+          </form>
+        </div>
+        <div class="sign-up-img">
+          <img class="ghast" src="./assets/img/icons/ghast.gif" alt="">
+          <img class="sign-up-image" src="./assets/img/mobs/Enderman.webp" alt="">
+          <!-- <img class="sheep" src="./assets/img/icons/sheep.gif" alt=""> -->
+          <!-- <img class="mushroom" src="./assets/img/icons/mushroom.png" alt=""> -->
+          <!-- <img class="dog-cat" src="./assets/img/icons/dog&cat.gif" alt=""> -->
+        </div>
+      </section>
+    </section>
   </body>
   <script  src="./js/header.js"></script>
   <script  src="./js/sign-up.js"></script>

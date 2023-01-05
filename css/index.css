@@ -270,7 +270,7 @@ header.header-aktive .btn {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(17, 17, 17, 0.95);
   z-index: 5;
   transition: 0.4s ease all;
 }
@@ -316,7 +316,7 @@ header.header-aktive .btn {
   color: #fff;
   background-color: #111;
   min-height: 350px;
-  width: 450px;
+  width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -424,14 +424,14 @@ button.wrong-password {
   transform: translateY(-1px);
 }
 .sign-up-img {
-  width: 40%;
-  height: 100%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .sign-up-image {
   width: 100%;
+  object-fit: cover;
   filter: contrast(95%) brightness(100%);
 }
 /* .sign-up-img .sheep {
