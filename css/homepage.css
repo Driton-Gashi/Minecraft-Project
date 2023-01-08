@@ -97,6 +97,7 @@
   font-size: 3em;
   font-family: myFont;
 }
+
 .form-wrapper form {
   color: #fff;
   background-color: rgba(17, 17, 17, 0.9);
@@ -124,6 +125,14 @@
   left: 50%;
   object-fit: scale-down;
   transform: translate(-50%, -50%);
+}
+.messageSent {
+  position: absolute;
+  top: 3em;
+  font-size: 1em;
+  color: green;
+  width: 70%;
+  text-align: left;
 }
 /* .form-wrapper form > img {
   width: 250px;
