@@ -127,8 +127,9 @@
   transform: translate(-50%, -50%);
 }
 .messageSent {
+  font-family: myFont;
   position: absolute;
-  top: 3em;
+  top: 2em;
   font-size: 1em;
   color: green;
   width: 70%;
