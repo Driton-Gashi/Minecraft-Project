@@ -73,3 +73,89 @@
 .video iframe {
   border: 10px solid rgba(255, 255, 255, 0.2);
 }
+/* Contact Form */
+.contact {
+  min-height: 100vh;
+  background: linear-gradient(rgba(17, 17, 17, 0), rgba(17, 17, 17, 1)),
+    url(../assets/img/background/image-2-fliped.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+.form-wrapper {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-title {
+  font-size: 3em;
+  font-family: myFont;
+}
+.form-wrapper form {
+  color: #fff;
+  background-color: rgba(17, 17, 17, 0.9);
+  min-height: 500px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 10px;
+  padding: 2em 0;
+}
+.form-wrapper form .center {
+  padding-top: 1em;
+  width: 70%;
+  font-family: myFont;
+}
+.form-wrapper form > img {
+  width: 250px;
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  object-fit: scale-down;
+  transform: translate(-50%, -50%);
+  filter: contrast(130%);
+}
+.username-label,
+.email-label,
+.message-label {
+  font-size: 1.3em;
+  font-weight: lighter;
+  padding-bottom: 0.1em;
+}
+
+.form-wrapper .username,
+.form-wrapper .email,
+.form-wrapper .message {
+  font-size: 1em;
+  font-family: myFont;
+  width: 100%;
+  padding: 0.7em;
+  margin-bottom: 1em;
+  border-radius: 3px;
+  border: 0;
+  color: black;
+}
+.form-wrapper button {
+  padding: 0.6em 2em;
+  font-size: 1em;
+  font-family: myFont;
+  font-weight: lighter;
+  background-color: green;
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 3px;
+  transition: 0.4s ease transform;
+}
+
+.form-wrapper button:hover {
+  background-color: rgba(0, 128, 0, 0.664);
+}
