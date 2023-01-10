@@ -184,16 +184,24 @@
     </div>
     <div id="collection" class="collection">
       <h1 class="collection-title flex-center">
-        Mob Collection &MediumSpace;
+        Mobs Collection &MediumSpace;
         <img width="50px" src="../assets/img/icons/block.gif" alt="" />
       </h1>
       <div class="collection-content">
         <div class="collection-header">
           <div class="collection-buttons-wrapper">
-            <button class="collection-btn">Zombie</button>
-            <button class="collection-btn">Witch</button>
-            <button class="collection-btn">Villager</button>
-            <button class="collection-btn">Nether</button>
+            <button onclick="filterBox('zombie')" class="collection-btn">
+              Zombie
+            </button>
+            <button onclick="filterBox('skeleton')" class="collection-btn">
+              Skeleton
+            </button>
+            <button onclick="filterBox('warden')" class="collection-btn">
+              Warden
+            </button>
+            <button onclick="filterBox('')" class="collection-btn">
+              Reset
+            </button>
           </div>
           <div class="collection-search-wrapper">
             <input
@@ -206,29 +214,7 @@
             </button>
           </div>
         </div>
-        <div class="collection-body">
-          <!-- Collection-box start -->
-
-          <!-- <div class="collection-box">
-            <div class="collection-box-body">
-              <img src="../assets/img/mobs/skeleton.png" alt="" />
-              <h1 class="collection-box-title">Lorem ipsum dolor sit. </h1>
-            </div>
-            <div class="collection-box-footer">
-              <span class="view-wrapper"
-                ><i class="bi bi-eye-fill"></i>
-                <span class="view-number">&ThinSpace;?</span>
-              </span>
-
-              <span class="like-wrapper"
-                ><i class="bi bi-suit-heart"></i
-                ><span class="like-number">&ThinSpace; ?</span>
-              </span>
-            </div>
-          </div> -->
-
-          <!--Collection-box end -->
-        </div>
+        <div class="collection-body"></div>
       </div>
     </div>
     <!-- Sign Up Section -->

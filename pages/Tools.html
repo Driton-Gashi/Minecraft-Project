@@ -190,10 +190,18 @@
       <div class="collection-content">
         <div class="collection-header">
           <div class="collection-buttons-wrapper">
-            <button class="collection-btn">Wood</button>
-            <button class="collection-btn">Stone</button>
-            <button class="collection-btn">Gold</button>
-            <button class="collection-btn">Diamond</button>
+            <button onclick="filterBox('diamond')" class="collection-btn">
+              Diamond
+            </button>
+            <button onclick="filterBox('gold')" class="collection-btn">
+              Gold
+            </button>
+            <button onclick="filterBox('fishing')" class="collection-btn">
+              others
+            </button>
+            <button onclick="filterBox('')" class="collection-btn">
+              Reset
+            </button>
           </div>
           <div class="collection-search-wrapper">
             <input

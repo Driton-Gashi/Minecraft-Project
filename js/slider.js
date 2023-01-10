@@ -18,6 +18,7 @@ const forward = () => {
   clearInterval(automaticSliderInterval);
   automaticSliderInterval = setInterval(automaticSlider, 5000);
 };
+
 const back = () => {
   if (slider.classList.contains("forward-1")) {
     slider.classList.remove("forward-1");
@@ -35,6 +36,7 @@ const back = () => {
   clearInterval(automaticSliderInterval);
   automaticSliderInterval = setInterval(automaticSlider, 5000);
 };
+
 const automaticSlider = () => {
   if (slider.classList.contains("forward-2")) {
     slider.classList.remove("forward-2");
@@ -51,4 +53,5 @@ const automaticSlider = () => {
     slider.classList.add("forward-2");
   }
 };
+
 let automaticSliderInterval = setInterval(automaticSlider, 5000);
