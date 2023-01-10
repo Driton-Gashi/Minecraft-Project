@@ -86,24 +86,40 @@ const users = [
 ];
 
 loginButton.addEventListener("click", () => {
+  const loadingUrl = document.title.includes("Homepage")
+    ? "./assets/img/icons/loading.gif"
+    : "../assets/img/icons/loading.gif";
+
   // if user is registered successfully
   if (loginButton.textContent == "Register") {
-    console.log("Registration was successful");
+    users.forEach((user) => {
+      if (user.username.toLowerCase() == username.value.toLowerCase()) {
+        errorMessage.innerHTML = `user: ${username.value} already exists`;
+        errorMessage.classList.remove("hide");
+      } else {
+        // Add new user to array
+        let newUser = {
+          username: username.value,
+          password: password.value,
+        };
+        users.push(newUser);
 
-    EmriPerdoruesit = username.value;
-    errorMessage.innerHTML = `<img  width="30px" src="./assets/img/icons/loading.gif" > Welcome ${EmriPerdoruesit}`;
-    errorMessage.classList.remove("hide");
-    errorMessage.classList.add("welcome");
-    profileOption.classList.remove("hide");
-    document.querySelector(".name").value = EmriPerdoruesit;
-    signUpBtn.classList.add("hide");
-    setTimeout(() => {
-      signUpPage.classList.remove("show");
-      document.body.classList.remove("noScroll");
-      errorMessage.innerHTML = "";
-      errorMessage.classList.remove("welcome");
-      emptyInputs();
-    }, 3000);
+        EmriPerdoruesit = username.value;
+        errorMessage.innerHTML = `<img  width="30px" src="${loadingUrl}" > Welcome ${EmriPerdoruesit}`;
+        errorMessage.classList.remove("hide");
+        errorMessage.classList.add("welcome");
+        profileOption.classList.remove("hide");
+        document.querySelector(".name").value = EmriPerdoruesit;
+        signUpBtn.classList.add("hide");
+        setTimeout(() => {
+          signUpPage.classList.remove("show");
+          document.body.classList.remove("noScroll");
+          errorMessage.innerHTML = "";
+          errorMessage.classList.remove("welcome");
+          emptyInputs();
+        }, 3000);
+      }
+    });
 
     // if user is Loged in successfully
   } else {
@@ -113,7 +129,7 @@ loginButton.addEventListener("click", () => {
         user.password === password.value
       ) {
         EmriPerdoruesit = username.value;
-        errorMessage.innerHTML = `<img  width="30px" src="./assets/img/icons/loading.gif" > Welcome back ${EmriPerdoruesit}`;
+        errorMessage.innerHTML = `<img  width="30px" src="${loadingUrl}" > Welcome back ${EmriPerdoruesit}`;
         errorMessage.classList.remove("hide");
         errorMessage.classList.add("welcome");
         profileOption.classList.remove("hide");
@@ -127,7 +143,7 @@ loginButton.addEventListener("click", () => {
           emptyInputs();
         }, 3000);
       } else {
-        errorMessage.innerHTML = `user: ${username.value} doesn't exist`;
+        errorMessage.innerHTML = `user: ${username.value}, password or username does not match`;
         errorMessage.classList.remove("hide");
       }
     });
