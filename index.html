@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./assets/img/icons/favicon.ico" type="image/x-icon">
-    <title>Minecraft Project</title>
+    <title>Minecraft Project - Homepage</title>
     <link rel="stylesheet" href="./css/homepage.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/slider.css" />
@@ -24,7 +24,7 @@
     </script>
     <img src="./assets/img/site-under-construction.jpg" alt="" class="under-construction">
     <!--Shto autoplay tek audio per mu dhez muzika vet  -->
-    <audio  loop class="minecraft-audio">
+    <audio autoplay loop class="minecraft-audio">
       <source src="./assets/audio/Minecraft-Theme-Song.mp3" type="audio/mp3">
     </audio>
    
@@ -147,7 +147,7 @@
            <input type="hidden" name="_subject" value="Message From Your Website">
            
            <h1 class="username-label">Name</h1>
-           <input class="username" type="text" name="name" required placeholder="Your Name" id="name">
+           <input class="contact-username" type="text" name="name" required placeholder="Your Name" id="name">
 
            <h1 class="email-label">Email</h1>
            <input class="email" type="email" name="email" required placeholder="Email Address" id="email">
@@ -226,15 +226,15 @@
             <div class="center">
 
               <h1 class="username-label">Username</h1>
-              <input  class="username" type="text" >
+              <input  class="username" type="text" />
 
               <h1 class="password-label">Password</h1>
-              <input  type="password" class="password" >
+              <input  type="password" class="password" />
 
               <h1 class="confirm-password-label hide">Confirm password</h1>
-              <input  type="password" class="confirm-password hide" >
+              <input  type="password" class="confirm-password hide" />
 
-              <div class="keep-me-logged-in"><input type="checkbox" >I'm not a robot </div>
+              <div class="keep-me-logged-in"><input type="checkbox"/ >I'm not a robot </div>
               <div class="validation-message"></div>
               <button type="button" >Login</button>
               <h1 class="register-message"><span class="haveAccount">Don't have an account</span> <span class="register-message-btn">register</span></h1>
@@ -252,7 +252,7 @@
     </section>
   </body>
   <script  src="./js/header.js"></script>
+  <script src="./js/slider.js"></script>
   <script  src="./js/sign-up.js"></script>
   <script  src="./js/index.js"></script>
-  <script src="./js/slider.js"></script>
 </html>

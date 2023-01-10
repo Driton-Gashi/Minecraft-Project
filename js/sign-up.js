@@ -80,16 +80,8 @@ const emptyInputs = () => {
 // Here we will save the users
 const users = [
   {
-    username: "admin",
-    password: "admin",
-  },
-  {
     username: "driton",
     password: "driton",
-  },
-  {
-    username: "shota",
-    password: "shota",
   },
 ];
 
@@ -134,6 +126,9 @@ loginButton.addEventListener("click", () => {
           errorMessage.classList.remove("welcome");
           emptyInputs();
         }, 3000);
+      } else {
+        errorMessage.innerHTML = `user: ${username.value} doesn't exist`;
+        errorMessage.classList.remove("hide");
       }
     });
   }
@@ -153,7 +148,6 @@ const validation = (e) => {
       message = `You are a robot access denied!`;
       return true;
     }
-
     return false;
   } else {
     const content = e.value;
@@ -169,7 +163,6 @@ const validation = (e) => {
       message = `"Confirm Password" should be the same as "Password"`;
       return true;
     }
-
     return false;
   }
 };
