@@ -1,16 +1,6 @@
 <?php
-
-$sname = "localhost";
-
-$unmae = "root";
-
-$password = "";
-
-$db_name = "test_db";
-
-$conn = mysqli_connect($sname, $unmae, $password, $db_name);
-
-if (!$conn) {
-
-    echo "Connection failed!";
+try {
+    $pdo = new PDO("mysql:host=localhost;dbname=test_db", "root", "");
+} catch (PDOException $pdo) {
+    die("Unsuccessful connection");
 }

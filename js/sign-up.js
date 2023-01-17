@@ -38,12 +38,13 @@ const validation = (e) => {
     message = `"${e.classList[0]}" contains more than 16 characters `;
     return true;
   }
-
   return false;
 };
 
 // when I click on Register on login Form
+const loginForm = document.querySelector(".login");
+const registerForm = document.querySelector(".register");
 register.addEventListener("click", () => {
-  confirmPassword.classList.toggle("hide");
-  confirmPasswordLabel.classList.toggle("hide");
+  loginForm.classList.toggle("hide");
+  registerForm.classList.toggle("hide");
 });
