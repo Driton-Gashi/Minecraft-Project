@@ -120,3 +120,20 @@ inputName.addEventListener("keypress", (e) => {
     inputName.classList.remove("border");
   }
 });
+
+// SUB PAGES BUTON FILTER when I click they get active class
+const butons = document.querySelectorAll(".collection-buttons-wrapper button");
+butons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.target.classList.add("active");
+    removeClass(e.target);
+  });
+});
+const removeClass = (e) => {
+  butons.forEach((button) => {
+    if (button == e) {
+    } else {
+      button.classList.remove("active");
+    }
+  });
+};

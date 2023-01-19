@@ -61,31 +61,17 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             </div>
         </div>
     </div>
-    <div id="collection" class="collection">
-        <h1 class="collection-title flex-center">
-            Blocks Collection &MediumSpace;
-            <img width="50px" src="../assets/img/icons/block.gif" alt="" />
-        </h1>
-        <div class="collection-content">
-            <div class="collection-header">
-                <div class="collection-buttons-wrapper">
-                    <button onclick="filterBox('block')" class="collection-btn">Block</button>
-                    <button onclick="filterBox('bricks')" class="collection-btn">Bricks</button>
-                    <button onclick="filterBox('stone')" class="collection-btn">Stone</button>
-                    <button onclick="filterBox('')" class="collection-btn">Resetg</button>
-                </div>
-                <div class="collection-search-wrapper">
-                    <input type="text" class="collection-search-input" placeholder="Search Block" />
-                    <button class="collection-search-btn">
-                        <i class="bi bi-search"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="collection-body">
-            </div>
-        </div>
-    </div>
-    <?php include '../includes/header.php' ?>
+    <?php
+        include '../includes/collection.php';
+        get_collection(array(
+            'title' => 'Blocks',
+            'first' => 'Diamond',
+            'second' => 'Block',
+            'third' => 'Stone',
+        ));
+
+        include '../includes/footer.php'
+        ?>
 
 </body>
 <script src="../js/header.js"></script>

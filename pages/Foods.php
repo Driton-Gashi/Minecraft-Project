@@ -63,32 +63,18 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             </div>
         </div>
     </div>
-    <div id="collection" class="collection">
-        <h1 class="collection-title flex-center">
-            Foods Collection &MediumSpace;
-            <img width="50px" src="../assets/img/icons/block.gif" alt="" />
-        </h1>
-        <div class="collection-content">
-            <div class="collection-header">
-                <div class="collection-buttons-wrapper">
-                    <button onclick="filterBox('cooked')" class="collection-btn">Cooked Meat</button>
-                    <button onclick="filterBox('raw')" class="collection-btn">Raw Meat</button>
-                    <button onclick="filterBox('potato')" class="collection-btn">Potato</button>
-                    <button onclick="filterBox('')" class="collection-btn">reset</button>
-                </div>
-                <div class="collection-search-wrapper">
-                    <input type="text" class="collection-search-input" placeholder="Search Food" />
-                    <button class="collection-search-btn">
-                        <i class="bi bi-search"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="collection-body">
+    <?php
+        include '../includes/collection.php';
+        get_collection(array(
+            'title' => 'Foods',
+            'first' => 'Raw',
+            'second' => 'Cooked',
+            'third' => 'Apple',
+        ));
 
-            </div>
-        </div>
-    </div>
-    <?php include '../includes/header.php' ?>
+        include '../includes/footer.php'
+        ?>
+
 </body>
 <script src="../js/header.js"></script>
 <script src="../js/slider.js"></script>

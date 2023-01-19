@@ -19,6 +19,7 @@ if (isset($_POST['usernameRegister'])) {
 
     if ($query->execute()) {
         $_SESSION['message'] = "Successfully created your account";
+        $_SESSION['class'] = 'successful';
     } else {
         $_SESSION['message'] = "A problem occurred creating your account";
     }

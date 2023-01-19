@@ -62,39 +62,17 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             </div>
         </div>
     </div>
-    <div id="collection" class="collection">
-        <h1 class="collection-title flex-center">
-            Mobs Collection &MediumSpace;
-            <img width="50px" src="../assets/img/icons/block.gif" alt="" />
-        </h1>
-        <div class="collection-content">
-            <div class="collection-header">
-                <div class="collection-buttons-wrapper">
-                    <button onclick="filterBox('zombie')" class="collection-btn">
-                        Zombie
-                    </button>
-                    <button onclick="filterBox('skeleton')" class="collection-btn">
-                        Skeleton
-                    </button>
-                    <button onclick="filterBox('warden')" class="collection-btn">
-                        Warden
-                    </button>
-                    <button onclick="filterBox('')" class="collection-btn">
-                        Reset
-                    </button>
-                </div>
-                <div class="collection-search-wrapper">
-                    <input type="text" class="collection-search-input" placeholder="Search Mob" />
-                    <button class="collection-search-btn">
-                        <i class="bi bi-search"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="collection-body"></div>
-        </div>
-    </div>
+    <?php
+        include '../includes/collection.php';
+        get_collection(array(
+            'title' => 'Mobs',
+            'first' => 'Zombie',
+            'second' => 'Skeleton',
+            'third' => 'Warden',
+        ));
 
-    <?php include '../includes/footer.php' ?>
+        include '../includes/footer.php'
+        ?>
 </body>
 <script src="../js/slider.js"></script>
 <script src="../js/mobs-data.js"></script>

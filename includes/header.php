@@ -6,9 +6,10 @@
     </div>
     <nav>
         <ul class="menu">
-            <li><a href="#top">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li class="dropdown-parent"><a href="#">Guide <i class="bi bi-chevron-down dropdown-icon"></i></a>
+            <li><a href="./Home.php">Home</a></li>
+            <li><a href="./Home.php#about">About</a></li>
+            <li><a href="./Home.php#contact">Contact</a></li>
+            <li class="dropdown-parent"><a>Guide <i class="bi bi-chevron-down dropdown-icon"></i></a>
                 <ul class="dropdown hide">
                     <li onclick="(()=>{
                 window.location = '../pages/Mobs.php'
@@ -24,7 +25,6 @@
               })()">Tools</li>
                 </ul>
             </li>
-            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <div class="header-icons">

@@ -19,7 +19,18 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 <!-- Loading Effect -->
 
 <body class="noScroll">
-    <?php include './includes/loadingAndMusic.php' ?>
+    <!-- Loading Effect -->
+    <div class="loader-wrapper">
+        <img src="./assets/img/icons/Minecraft-block.png" alt="" class="loader">
+        <img src="./assets/img/icons/Minecraft-Logo.png" width="300px" alt="">
+    </div>
+    <script>
+    window.addEventListener("load", () => {
+        document.querySelector(".loader-wrapper").classList.add("hide");
+        document.body.classList.remove("noScroll");
+    })
+    </script>
+    <img src="./assets/img/site-under-construction.jpg" alt="" class="under-construction">
     <section id="sign-up">
 
         <section class="sign-up-wrapper">
@@ -33,7 +44,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 
                         <h1 class="password-label">Password</h1>
                         <input name="passwordLogin" type="password" class="password" />
-                        <h1 class="validation-message l">
+                        <h1
+                            class="validation-message l <?php if (isset($_SESSION['class'])) echo $_SESSION['class'] ?>">
                             <?php
                                 if (isset($_SESSION['message'])) {
                                     echo $_SESSION['message'];

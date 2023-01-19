@@ -12,5 +12,5 @@ window.addEventListener("load", () => {
 <img src="../assets/img/site-under-construction.jpg" alt="" class="under-construction">
 <!--Shto autoplay tek audio per mu dhez muzika vet  -->
 <audio loop class="minecraft-audio">
-    <source src="../assets/audio/Minecraft-Theme-Song.mp3" type="audio/mp3">
+    <source src="../assets/audio/Minecraft-Theme-Song-3minute.mp3" type="audio/mp3">
 </audio>

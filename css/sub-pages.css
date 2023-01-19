@@ -48,6 +48,10 @@
   background-color: green;
   transform: translateY(-3px);
 }
+.collection-btn.active {
+  background-color: green;
+  transform: translateY(-3px);
+}
 .collection-btn:active {
   transform: translateY(0px);
 }

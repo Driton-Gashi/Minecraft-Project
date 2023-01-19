@@ -18,47 +18,15 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 </head>
 
 <body class="noScroll">
-    <?php include './includes/loadingAndMusic.php' ?>
+    <?php include '../includes/loadingAndMusic.php' ?>
     <div class="background">
         <?php include '../includes/header.php' ?>
         <div class="hero">
-            <?php
-                isset($_SESSION['image']);
-                echo "hello world";
+            <?php include
+                    '../includes/slider.php';
+                // qetu punon Shota
+                get_slider(array('img' => 'hoe.jpg', 'txt' => "Y’all Know What They Call These"), array('img' => 'enderman.jpg', 'txt' => 'Don’t Look Now, It’s An Enderman!'), array('img' => 'creeper.jpg', 'txt' => 'Don’t Fear The Creeper'), array('img' => 'died.png', 'txt' => 'YOO F*** The Creeper'), array('img' => 'flexing.jpg', 'txt' => 'I’m Rich'), array('img' => 'lava.jpg', 'txt' => 'It’s Getting Hot In Here'));
                 ?>
-            <div class="slideshow">
-                <div class="moving">
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/hoe.jpg" alt="">
-                        <h1 class="slide-box-text">Y'all Know What They Call These</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/enderman.jpg" alt="">
-                        <h1 class="slide-box-text">Don’t Look Now, It’s An Enderman!</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/creeper.jpg" alt="">
-                        <h1 class="slide-box-text">Don’t Fear The Creeper</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/died.png" alt="">
-                        <h1 class="slide-box-text">YOO F*** The Creeper</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/flexing.jpg" alt="">
-                        <h1 class="slide-box-text">I'm Rich</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/lava.jpg" alt="">
-                        <h1 class="slide-box-text">It's Getting Hot In Here</h1>
-                    </div>
-                </div>
-                <div class="slider-command">
-                    <button onclick="forward()" class="slider-btn"><i class="bi bi-forward-fill"></i></button>
-
-                    <button onclick="back()" class="slider-btn"><i class="bi bi-forward-fill"></i></button>
-                </div>
-            </div>
         </div>
     </div>
     <section class="about" id="about">
@@ -121,7 +89,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             </form>
         </div>
     </section>
-    <?php include '../includes/header.php' ?>
+    <?php include '../includes/footer.php' ?>
 </body>
 <script src="../js/header.js"></script>
 <script src="../js/slider.js"></script>

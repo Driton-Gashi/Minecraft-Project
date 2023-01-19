@@ -50,6 +50,7 @@ registerBtn.addEventListener("click", () => {
   loginForm.classList.toggle("hide");
   registerForm.classList.toggle("hide");
   loginErrorMessage.textContent = "";
+  loginErrorMessage.classList.remove("successful");
   registerErrorMessage.textContent = "";
 });
 loginBtn.addEventListener("click", () => {

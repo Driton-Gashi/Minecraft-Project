@@ -19,6 +19,10 @@ html {
 :root {
   --selection-background: green;
 }
+.successful {
+  color: green !important;
+}
+/* Body no sroll*/
 .noScroll {
   height: 100vh;
   overflow: hidden;
@@ -452,6 +456,9 @@ button.wrong-password {
 .dropdown-parent {
   position: relative;
 }
+.dropdown-parent a {
+  cursor: default;
+}
 .dropdown {
   position: absolute;
   top: 2em;
@@ -475,6 +482,7 @@ button.wrong-password {
 .under-construction {
   display: none;
 }
+
 /* before footer */
 .before-footer {
   padding: 2em 0 0 0;

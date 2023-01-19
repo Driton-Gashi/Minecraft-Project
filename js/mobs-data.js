@@ -137,11 +137,11 @@ searchBtn.addEventListener("click", () => {
 });
 
 const filterBox = (text) => {
+  console.log(this);
   let boxes = document.querySelectorAll(".collection-box");
-
   Array.from(boxes).forEach((box) => {
     let boxName = box.childNodes[1].childNodes[3].textContent;
-    if (boxName.toLocaleLowerCase().indexOf(text) != -1) {
+    if (boxName.toLocaleLowerCase().indexOf(text.toLocaleLowerCase()) != -1) {
       box.style.display = "block";
     } else {
       box.style.display = "none";
