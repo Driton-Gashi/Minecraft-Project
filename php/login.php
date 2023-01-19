@@ -9,9 +9,8 @@
     $pass = validate($_POST['password']); -->
 <?php
 session_start();
-
 if (isset($_SESSION['user_id'])) {
-    header("Location: /");
+    header("Location: ../");
 }
 
 require 'db_conn.php';
@@ -19,9 +18,7 @@ require 'db_conn.php';
 if (isset($_POST['usernameLogin'])) {
     $username = $_POST['usernameLogin'];
     $password = $_POST['passwordLogin'];
-    $message = '';
-
-    $query = $pdo->prepare('SELECT id,user_name,password FROM users WHERE user_name = :username');
+    $query = $pdo->prepare('SELECT id,user_name,password, image FROM users WHERE user_name = :username');
     $query->bindParam(':username', $username);
     $query->execute();
 
@@ -30,12 +27,13 @@ if (isset($_POST['usernameLogin'])) {
     if ($username == $user['user_name'] && password_verify($password, $user['password'])) {
 
         $_SESSION['id'] = $user['id'];
-        $_SESSION['user_name'] = $user['user_name'];
+        $_SESSION['username'] = $user['user_name'];
+        $_SESSION['image'] = $user['image'];
+
         header("Location: ../pages/Home.php");
-        $message = 'success';
     } else {
-        $message = 'Sorry, those credentials do not match';
-        header('Location: ../index.php');
+        $_SESSION['message'] = 'Your username or password is wrong!';
+        header('Location: ../');
     }
 }
 ?>

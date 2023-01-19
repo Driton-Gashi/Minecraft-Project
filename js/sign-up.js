@@ -1,31 +1,33 @@
 // Login Button Function
-const loginButton = document.querySelector(".sign-up-form button");
+const loginButton = document.querySelector(".login button");
 const username = document.querySelector(".username");
 const password = document.querySelector(".password");
-const errorMessage = document.querySelector(".validation-message");
-const register = document.querySelector(".register-message-btn");
+const loginErrorMessage = document.querySelector(".validation-message.l");
+const registerErrorMessage = document.querySelector(".validation-message.r");
+const registerBtn = document.querySelector(".register-message-btn.l");
+const loginBtn = document.querySelector(".register-message-btn.r");
 
 let message = "";
 loginButton.addEventListener("mouseover", () => {
   if (validation(username)) {
-    errorMessage.classList.remove("hide");
+    loginErrorMessage.classList.remove("hide");
     loginButton.classList.toggle("wrong-password");
-    errorMessage.textContent = message;
+    loginErrorMessage.textContent = message;
     return;
   } else if (validation(password)) {
-    errorMessage.classList.remove("hide");
+    loginErrorMessage.classList.remove("hide");
     loginButton.classList.toggle("wrong-password");
-    errorMessage.textContent = message;
+    loginErrorMessage.textContent = message;
     return;
   } else {
-    errorMessage.classList.add("hide");
+    loginErrorMessage.classList.add("hide");
     loginButton.classList.remove("wrong-password");
   }
 });
 const emptyInputs = () => {
   username.value = "";
   password.value = "";
-  errorMessage.textContent = "";
+  loginErrorMessage.textContent = "";
 };
 
 const validation = (e) => {
@@ -44,7 +46,15 @@ const validation = (e) => {
 // when I click on Register on login Form
 const loginForm = document.querySelector(".login");
 const registerForm = document.querySelector(".register");
-register.addEventListener("click", () => {
+registerBtn.addEventListener("click", () => {
   loginForm.classList.toggle("hide");
   registerForm.classList.toggle("hide");
+  loginErrorMessage.textContent = "";
+  registerErrorMessage.textContent = "";
+});
+loginBtn.addEventListener("click", () => {
+  loginForm.classList.toggle("hide");
+  registerForm.classList.toggle("hide");
+  loginErrorMessage.textContent = "";
+  registerErrorMessage.textContent = "";
 });
