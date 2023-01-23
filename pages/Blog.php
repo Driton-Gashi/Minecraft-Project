@@ -27,7 +27,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             <div class="left-side">
                 <div class="content">
                     <?php
-                        if ($_SESSION['username'] == 'driton') {
+                        if ($_SESSION['username'] == 'driton' || $_SESSION['username'] == 'shota') {
                         ?>
                     <div class="post ">
                         <form action="../php/create-post.php" class="post-form" method="post"
