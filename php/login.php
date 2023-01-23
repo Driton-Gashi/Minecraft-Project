@@ -13,7 +13,7 @@ if (isset($_SESSION['user_id'])) {
     header("Location: ../");
 }
 
-require 'db_conn.php';
+require './db_conn.php';
 
 if (isset($_POST['usernameLogin'])) {
     $username = $_POST['usernameLogin'];

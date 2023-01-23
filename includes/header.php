@@ -25,6 +25,8 @@
               })()">Tools</li>
                 </ul>
             </li>
+            <li><a href="../pages/Blog.php">Blog</a></li>
+
         </ul>
     </nav>
     <div class="header-icons">

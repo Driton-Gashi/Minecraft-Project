@@ -5,7 +5,7 @@ if (isset($_SESSION['id'])) {
     header("Location: /");
 }
 
-require 'db_conn.php';
+require './db_conn.php';
 
 if (isset($_POST['usernameRegister'])) {
 

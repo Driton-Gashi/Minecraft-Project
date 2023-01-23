@@ -71,7 +71,7 @@ document.body.addEventListener("click", (e) => {
 
 const logOut = () => {
   if (confirm("You are about to log out! \nare you sure?")) {
-    window.location = "../index.php";
+    window.location = "../php/logout.php";
   }
 };
 // Dropt down effect in the nav menu at "Guide" option
