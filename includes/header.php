@@ -25,16 +25,12 @@
               })()">Tools</li>
                 </ul>
             </li>
-            <li><a href="../pages/Blog.php">Blog</a></li>
-
+            <li><a href="../pages/Blog.php">News</a></li>
         </ul>
     </nav>
     <div class="header-icons">
         <i class="bi bi-volume-up-fill unMute "></i>
-
         <i class="bi bi-volume-mute-fill mute hide"></i>
-
-
         <div class="profile ">
             <img src="<?php echo $_SESSION['image'] ?>" alt="">
             <ul class="profile-menu hide">

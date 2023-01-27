@@ -68,12 +68,13 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             'first' => 'Diamond',
             'second' => 'Gold',
             'third' => 'Iron',
+            'type' => 'tools'
         ));
         include '../includes/footer.php' ?>
 </body>
 <script src="../js/header.js"></script>
 <script src="../js/slider.js"></script>
-<script src="../js/tools-data.js"></script>
+<script src="../js/collection.js"></script>
 
 </html>
 <?php

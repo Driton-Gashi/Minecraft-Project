@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
+if (isset($_SESSION['id'])) {
     require '../php/db_conn.php';
 ?>
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../assets/img/icons/favicon.ico" type="image/x-icon" />
-    <title>Blog</title>
+    <title>News - Minecraft</title>
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/Blog.css" />
 </head>
@@ -27,7 +27,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             <div class="left-side">
                 <div class="content">
                     <?php
-                        if ($_SESSION['username'] == 'driton' || $_SESSION['username'] == 'shota') {
+                        if ($_SESSION['role'] == 'admin') {
                         ?>
                     <div class="post ">
                         <form action="../php/create-post.php" class="post-form" method="post"
@@ -50,43 +50,66 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
                         <?php echo $_GET['msg'] ?>
                         <i class="bi bi-x-circle close-message-box"></i>
                     </div>
-                    <?php }
-
+                    <?php
+                        }
                         $query = $pdo->prepare('SELECT * FROM posts');
                         $query->execute();
 
                         $posts = $query->fetchAll();
-                        foreach ($posts as $post) {
-                        ?>
+                        foreach ($posts as $post) { ?>
                     <div class="post">
-                        <div class="left"><img src="../php/uploads/<?php echo $post['image'] ?>" alt=""></div>
+                        <div class="left"><img src="../php/uploads/<?php echo $post['image'] ?>" alt="">
+                        </div>
                         <div class="right">
-                            <div class="post-title"><?= $post['title'] ?></div>
-                            <div class="post-content"><?= $post['content'] ?></div>
-                            <div class="post-footer">
-                                <div class="post-footer__author">
-                                    By: <a href="#"><?= $post['author'] ?></a> &ThickSpace; &ThickSpace;Date: <a
-                                        href="#"><?= $post['date'] ?></a>
+
+                            <form action="../php/edit.php" method="post">
+                                <input disabled type="text" class="post-title" name="title"
+                                    value="<?= $post['title'] ?>">
+                                <textarea disabled class="post-content"
+                                    name="content"><?php echo strlen($post['content']) > 550 ? substr($post['content'], 0, 547) . '...' : $post['content']; ?></textarea>
+                                <!-- <button class="read-more">Read more</button> -->
+                                <div class="post-footer">
+                                    <div class="post-footer__author">
+                                        By: <a href="#"><?= $post['author'] ?></a> &ThickSpace; &ThickSpace;Date: <a
+                                            href="#"><?= $post['date'] ?></a>
+                                    </div>
+                                    <?php
+                                            if ($_SESSION['role'] == 'admin') {
+                                            ?>
+                                    <div class="footer-button green editForm">Edit</div>
+                                    <?php
+                                            } else {
+                                            ?>
+                                    <a href="./single.php?id=<?= $post['id'] ?>"
+                                        class="read-more footer-button green">Read more</a>
+                                    <?php
+                                            }
+                                            ?>
+                                    <div class="footer-button red hide cancel">Cancel</div>
+                                    <a href="../php/delete.php?id=<?php echo $post['id'] ?>"
+                                        class="footer-button red delete">Delete</a>
+                                    <button type="submit" class="footer-button green hide confirm">Confirm</button>
+                                    <input type="hidden" name="id" value="<?php echo $post['id'] ?>">
                                 </div>
-                                <button class="read-more">Read more</button>
-                                <a href="../php/delete.php?id=<?php echo $post['id'] ?>" class="delete">Delete</a>
-                            </div>
+                            </form>
+
                         </div>
                     </div>
+
                     <?php
                         }
                         ?>
                 </div>
             </div>
             <div class="right-side">
-                <h1 class="first-title">Main menu</h1>
                 <ul class="dashboard">
                     <li>
-                        <h3> User: <?= $_SESSION['username'] ?></h3>
+                        User: <?= $_SESSION['username'] ?>
                     </li>
                     <li>
-                        <h3>Total number of posts: <?= count($posts) ?></h3>
+                        Number of posts: <?= count($posts) ?>
                     </li>
+                    <li>Role: <?= $_SESSION['role'] ?></li>
 
                 </ul>
             </div>

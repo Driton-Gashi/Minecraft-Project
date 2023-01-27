@@ -74,6 +74,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 
                         <h1 class="confirm-password-label">Confirm password</h1>
                         <input name="confirmPassword" type="password" class="confirm-password" />
+                        <h1 class="confirm-password-label">Confirm password</h1>
+                        <input name="image" type="file" class="confirm-password" />
 
 
                         <h1 class="validation-message r">

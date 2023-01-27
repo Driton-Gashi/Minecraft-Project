@@ -155,3 +155,38 @@
 .collection-box-footer i {
   cursor: pointer;
 }
+.post {
+  width: 600px;
+  margin: 2.5em auto;
+  background-color: #222;
+  padding: 2em;
+  color: #fff;
+  font-family: myFont;
+  font-weight: lighter;
+}
+.post form .mob_name,
+.file-input {
+  width: 100%;
+  padding: 0.6em;
+  margin-bottom: 0.5em;
+  font-family: myFont;
+  font-size: 1em;
+}
+.mob-button {
+  display: block;
+  padding: 0.5em 1.5em;
+  cursor: pointer;
+  font-family: myFont;
+  font-size: 1em;
+  background-color: green;
+  border: 0;
+}
+.name-label {
+  font-size: 1.5em;
+  margin-bottom: 0.3em;
+  color: green;
+}
+.file-label {
+  font-size: 1.5em;
+  color: green;
+}

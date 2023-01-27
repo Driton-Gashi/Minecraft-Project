@@ -69,13 +69,14 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             'first' => 'Zombie',
             'second' => 'Skeleton',
             'third' => 'Warden',
+            'type' => 'mobs'
         ));
 
         include '../includes/footer.php'
         ?>
 </body>
 <script src="../js/slider.js"></script>
-<script src="../js/mobs-data.js"></script>
+<script src="../js/collection.js"></script>
 <script src="../js/header.js"></script>
 
 </html>

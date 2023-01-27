@@ -18,7 +18,7 @@ require './db_conn.php';
 if (isset($_POST['usernameLogin'])) {
     $username = $_POST['usernameLogin'];
     $password = $_POST['passwordLogin'];
-    $query = $pdo->prepare('SELECT id,user_name,password, image FROM users WHERE user_name = :username');
+    $query = $pdo->prepare('SELECT id,user_name,password, image,role FROM users WHERE user_name = :username');
     $query->bindParam(':username', $username);
     $query->execute();
 
@@ -29,6 +29,7 @@ if (isset($_POST['usernameLogin'])) {
         $_SESSION['id'] = $user['id'];
         $_SESSION['username'] = $user['user_name'];
         $_SESSION['image'] = $user['image'];
+        $_SESSION['role'] = $user['role'];
 
         header("Location: ../pages/Home.php");
     } else {

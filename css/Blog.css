@@ -1,10 +1,5 @@
 .background {
   height: auto;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)),
-    url(../assets/img/background/image-2.jpg);
-  /* background-image: url(../assets/img/icons/slideshow/171170.jpg); */
-  background-size: cover !important;
-  background-position: center !important;
 }
 .hero {
   min-height: 100vh;
@@ -69,10 +64,15 @@
 }
 .post-title {
   font-size: 1.7em;
-  padding-bottom: 0.3em;
+  margin-bottom: 0.3em;
   font-weight: bold;
   color: #777;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  width: 100%;
 }
+
 .post-content {
   font-size: 1em;
   margin-bottom: 1em;
@@ -81,6 +81,13 @@
   overflow: hidden;
   color: #777;
   transition: 0.4s ease all;
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  text-align: left;
+  resize: none;
+  border: 0;
 }
 .post-content.active {
   height: 310px !important;
@@ -95,8 +102,11 @@
   justify-content: space-between;
   align-items: center;
 }
-.post-footer .read-more,
-.post-footer .delete {
+.border {
+  border: 1px solid #777;
+}
+
+.post-footer .footer-button {
   padding: 0.3em 1em;
   cursor: pointer;
   font-size: 1em;
@@ -106,24 +116,31 @@
   border: 0;
   font-weight: bold;
 }
-.read-more {
-  background-color: green;
-}
-.delete {
+.red {
   background-color: rgb(150, 0, 0);
 }
+.green {
+  background-color: green;
+}
+.footer-button:hover {
+  transform: rotate(3deg);
+  color: #111 !important;
+}
+.footer-button:active {
+  transform: rotate(0deg);
+}
 .message-box.green,
-.message-box.green {
+.message-box.red {
   width: 700px;
   padding: 1em;
   background-color: rgba(0, 128, 0, 0.5);
-  color: #111;
+  color: #fff;
   font-weight: bold;
   border-radius: 4px;
   position: relative;
 }
 .message-box.red {
-  background-color: rgba(220, 20, 60, 0.5);
+  background-color: rgba(220, 20, 60, 0.5) !important;
 }
 .close-message-box {
   position: absolute;
@@ -132,17 +149,9 @@
   transform: translateY(-40%);
   font-size: 1.8em;
   cursor: pointer;
+  color: #fff;
 }
 
-.read-more:hover,
-.delete:hover {
-  transform: rotate(3deg);
-  color: #111 !important;
-}
-.read-more:active,
-.delete:active {
-  transform: rotate(0deg);
-}
 .scrollUp {
   animation: scrollUp 0.4s ease forwards;
 }

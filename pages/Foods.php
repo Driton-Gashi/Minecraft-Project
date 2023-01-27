@@ -70,6 +70,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             'first' => 'Raw',
             'second' => 'Cooked',
             'third' => 'Apple',
+            'type' => 'foods'
         ));
 
         include '../includes/footer.php'
@@ -78,7 +79,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 </body>
 <script src="../js/header.js"></script>
 <script src="../js/slider.js"></script>
-<script src="../js/foods-data.js"></script>
+<script src="../js/collection.js"></script>
 
 </html>
 <?php
