@@ -11,7 +11,7 @@ if (isset($_POST['blocks_name']) && isset($_FILES['image'])) {
     $name = $_POST['blocks_name'];
     $temp = $_FILES['image']['tmp_name'];
     $file_name = time() . $_FILES['image']['name'];
-    move_uploaded_file($temp, dirname(__FILE__) . "\uploads\\$file_name");
+    move_uploaded_file($temp, dirname(__FILE__) . "\uploads\blocks\\$file_name");
     $sql = 'INSERT INTO blocks_data (name, image) VALUES (:name,:image)';
     $query = $pdo->prepare($sql);
     $query->bindParam('name', $name);

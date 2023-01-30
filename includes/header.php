@@ -32,7 +32,7 @@
         <i class="bi bi-volume-up-fill unMute "></i>
         <i class="bi bi-volume-mute-fill mute hide"></i>
         <div class="profile ">
-            <img src="<?php echo $_SESSION['image'] ?>" alt="">
+            <img src="../php/uploads/profiles/<?php echo $_SESSION['image'] ?>" alt="">
             <ul class="profile-menu hide">
                 <li onclick="changeName()" class="edit-profile-li"><i class="bi bi-person-circle"></i>
                     <div class="edit-profile-text-wrapper"> Edit Username &ThinSpace; </div><input

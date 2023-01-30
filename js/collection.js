@@ -1,21 +1,19 @@
-const hearts = Array.from(document.querySelectorAll(".like"));
+const hearts = document.querySelectorAll(".like");
+let isClicked = false;
+
 hearts.forEach((heart) => {
-  let isClicked = false;
   heart.addEventListener("click", (e) => {
     let likeNumber = parseInt(e.target.parentNode.childNodes[1].textContent);
-    if (!isClicked) {
-      likeNumber++;
-      e.target.parentNode.childNodes[1].innerHTML = `&ThinSpace;${likeNumber}`;
-      isClicked = true;
-      e.target.classList.remove("bi-suit-heart");
-      e.target.classList.add("bi-suit-heart-fill");
-    } else {
+    if (e.target.classList.contains("bi-suit-heart-fill")) {
       likeNumber--;
-      e.target.parentNode.childNodes[1].innerHTML = `&ThinSpace;${likeNumber}`;
       e.target.classList.remove("bi-suit-heart-fill");
       e.target.classList.add("bi-suit-heart");
-      isClicked++;
-      isClicked = false;
+      e.target.parentNode.childNodes[1].innerHTML = `&ThinSpace;${likeNumber}`;
+    } else {
+      likeNumber++;
+      e.target.classList.add("bi-suit-heart-fill");
+      e.target.classList.remove("bi-suit-heart");
+      e.target.parentNode.childNodes[1].innerHTML = `&ThinSpace;${likeNumber}`;
     }
   });
 });
@@ -49,3 +47,15 @@ const filterBox = (text) => {
     }
   });
 };
+
+function like(id, table) {
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+    } else {
+    }
+  };
+
+  xhttp.open("GET", `../php/like.php?id=${id}&table=${table}`, true);
+  xhttp.send();
+}

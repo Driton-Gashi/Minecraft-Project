@@ -1,5 +1,7 @@
 <?php
 session_start();
+$_SESSION['previous_location'] = 'Blog';
+
 if (isset($_SESSION['id'])) {
     require '../php/db_conn.php';
 ?>

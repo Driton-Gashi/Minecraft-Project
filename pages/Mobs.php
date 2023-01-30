@@ -1,5 +1,7 @@
 <?php
 session_start();
+$_SESSION['previous_location'] = 'Mobs';
+
 if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 ?>
 <!DOCTYPE html>
@@ -78,6 +80,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 <script src="../js/slider.js"></script>
 <script src="../js/collection.js"></script>
 <script src="../js/header.js"></script>
+
 
 </html>
 <?php

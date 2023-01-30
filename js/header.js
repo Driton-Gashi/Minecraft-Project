@@ -137,3 +137,17 @@ const removeClass = (e) => {
     }
   });
 };
+
+const images = document.querySelectorAll(".profile img");
+
+images.forEach((image) => {
+  if (
+    image.src.includes(".jpg") ||
+    image.src.includes(".png") ||
+    image.src.includes(".webp") ||
+    image.src.includes(".jpeg")
+  ) {
+  } else {
+    image.src = "../assets/img/icons/profile-image(default).png";
+  }
+});

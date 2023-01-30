@@ -1,5 +1,7 @@
 <?php
 session_start();
+$_SESSION['previous_location'] = 'Home';
+
 if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 
 ?>

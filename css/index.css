@@ -210,7 +210,8 @@ header.header-aktive .btn {
 }
 
 .profile img {
-  width: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
   filter: contrast(120%);
@@ -219,7 +220,7 @@ header.header-aktive .btn {
   border: 2px solid transparent;
 }
 .profile img:hover {
-  filter: brightness(120%);
+  filter: brightness(80%);
 }
 
 .profile-menu {
@@ -311,7 +312,7 @@ header.header-aktive .btn {
 .sign-up-form form {
   color: #fff;
   background-color: #111;
-  min-height: 350px;
+  min-height: 400px;
   width: 500px;
   display: flex;
   justify-content: center;
@@ -338,6 +339,8 @@ header.header-aktive .btn {
   border-radius: 3px;
   border: 0;
   color: black;
+  position: relative;
+  z-index: 999;
 }
 
 .sign-up-form .password,
@@ -346,9 +349,16 @@ header.header-aktive .btn {
   padding: 0.5em;
   border-radius: 3px;
   border: 0;
+  margin-bottom: 0.5em;
+}
+.file {
+  background-color: #222;
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 3px;
+  border: 0;
   margin-bottom: 1em;
 }
-
 .sign-up-form button {
   margin-top: 0.5em;
   padding: 0.6em 2em;

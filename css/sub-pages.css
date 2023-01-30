@@ -155,6 +155,10 @@
 .collection-box-footer i {
   cursor: pointer;
 }
+.like-wrapper {
+  color: green;
+  text-decoration: none;
+}
 .post {
   width: 600px;
   margin: 2.5em auto;
@@ -168,18 +172,25 @@
 .file-input {
   width: 100%;
   padding: 0.6em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
   font-family: myFont;
   font-size: 1em;
+  border-radius: 4px;
+}
+.file-input {
+  background-color: #333;
 }
 .mob-button {
   display: block;
-  padding: 0.5em 1.5em;
+  padding: 0.7em 1.5em;
   cursor: pointer;
   font-family: myFont;
   font-size: 1em;
   background-color: green;
   border: 0;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 500;
 }
 .name-label {
   font-size: 1.5em;

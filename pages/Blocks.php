@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['previous_location'] = 'Blocks';
 if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 ?>
 <!DOCTYPE html>
@@ -78,7 +79,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
 <script src="../js/header.js"></script>
 <script src="../js/slider.js"></script>
 <script src="../js/collection.js"></script>
-
 
 </html>
 <?php

@@ -1,5 +1,7 @@
 <?php
 session_start();
+$_SESSION['previous_location'] = 'single';
+
 if (isset($_SESSION['id'])) {
     require '../php/db_conn.php';
     $id = $_GET['id'];

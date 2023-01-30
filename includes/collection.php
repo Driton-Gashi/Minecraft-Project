@@ -54,26 +54,29 @@ if (isset($_SESSION['id'])) {
                 $query->execute();
 
                 $mobs = $query->fetchAll();
-                foreach ($mobs as $mob) {
                 ?>
         <div class="collection-body">
+            <?php
+                    foreach ($mobs as $mob) {
+                    ?>
             <div class="collection-box">
                 <div class="collection-box-body">
-                    <img src="../php/uploads/<?= $mob['image'] ?>" alt="">
+                    <img src="../php/uploads/<?= $args['type'] ?>/<?= $mob['image'] ?>" alt="">
                     <h1 class="collection-box-title"><?= $mob['name'] ?></h1>
                 </div>
                 <div class="collection-box-footer">
                     <span class="view-wrapper"><i class="bi bi-eye-fill"></i>
-                        <span class="view-number"><?= $mob['views'] ?></span>
-
-                        <span class="like-wrapper"><i class="bi bi-suit-heart like"></i><span class="like-number">
+                        <span class="view-number"><?= rand(50, 100) ?></span>
+                        <a onclick="like(<?= $mob['id'] ?>,'<?= $args['type'] ?>')" class="like-wrapper"><i
+                                class="bi <?= " bi-suit-heart " ?>like"></i><span class="like-number">
                                 <?= $mob['likes'] ?></span>
-                        </span>
+                        </a>
                 </div>
             </div>
+            <?php } ?>
         </div>
-        <?php } ?>
     </div>
+
 </div>
 <?php
     }
