@@ -1,13 +1,9 @@
 <?php
 session_start();
-$_SESSION['previous_location'] = 'single';
-$id = $_GET['id'];
+$_SESSION['previous_location'] = 'Blog';
+$author = $_GET['author'];
 if (isset($_SESSION['username'])) {
     require '../php/db_conn.php';
-    $query = $pdo->prepare('SELECT * FROM posts where id = :id');
-    $query->bindParam(':id', $id);
-    $query->execute();
-    $posts = $query->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,22 +13,12 @@ if (isset($_SESSION['username'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../assets/img/icons/favicon.ico" type="image/x-icon" />
-    <title><?= $posts['0']['title'] ?></title>
+    <title><?= $author ?>'s Posts' - Minecraft</title>
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/Blog.css" />
     <style>
-    .post {
-        width: 80%;
-        min-height: 70vh;
-    }
-
-    .right form {
-        height: 100%;
-    }
-
-    .post-content {
-        height: 90%;
-        overflow: auto;
+    .left-side {
+        width: 100%;
     }
     </style>
 </head>
@@ -48,24 +34,25 @@ if (isset($_SESSION['username'])) {
             <div class="left-side">
                 <div class="content">
                     <?php
+                        $query = $pdo->prepare('SELECT * FROM posts WHERE author = :author');
+                        $query->bindParam(':author', $author);
+                        $query->execute();
+                        $posts = $query->fetchAll();
                         foreach ($posts as $post) { ?>
                     <div class="post">
                         <div class="left"><img src="../php/uploads/<?php echo $post['image'] ?>" alt="">
                         </div>
                         <div class="right">
-
                             <form action="../php/edit.php" method="post">
                                 <input disabled type="text" class="post-title" name="title"
                                     value="<?= $post['title'] ?>">
                                 <textarea disabled class="post-content"
-                                    name="content"><?php echo $post['content']; ?></textarea>
+                                    name="content"><?php echo strlen($post['content']) > 550 ? substr($post['content'], 0, 547) . '...' : $post['content']; ?></textarea>
                                 <!-- <button class="read-more">Read more</button> -->
                                 <div class="post-footer">
                                     <div class="post-footer__author">
-                                        <span class="j"> By: <a
-                                                href="./Author.php?author=<?= $post['author'] ?>"><?= $post['author'] ?></a></span>
-                                        <span class="k"> &ThickSpace; &ThickSpace;Date: <a
-                                                href="#"><?= $post['date'] ?></a></span>
+                                        By: <a href="#"><?= $post['author'] ?></a> &ThickSpace; &ThickSpace;Date: <a
+                                            href="#"><?= $post['date'] ?></a>
                                     </div>
                                     <?php
                                             if ($_SESSION['role'] == 'admin') {
@@ -73,10 +60,15 @@ if (isset($_SESSION['username'])) {
                                     <div class="footer-button green editForm">Edit</div>
                                     <?php
                                             } else {
+                                            ?>
+                                    <a href="./single.php?id=<?= $post['id'] ?>"
+                                        class="read-more footer-button green">Read more</a>
+                                    <?php
                                             }
                                             ?>
                                     <div class="footer-button red hide cancel">Cancel</div>
-                                    <?php if ($_SESSION['role'] == 'admin') { ?>
+                                    <?php
+                                            if ($_SESSION['role'] == 'admin') { ?>
                                     <div onclick="deletePost(<?= $post['id'] ?>)" class="footer-button red delete">
                                         Delete</div>
                                     <?php } ?>
@@ -92,15 +84,14 @@ if (isset($_SESSION['username'])) {
                         }
                         ?>
                 </div>
-
             </div>
+
         </div>
     </div>
-
     <?php include '../includes/footer.php' ?>
 </body>
-<script src="../js/header.js"></script>
 <script src="../js/blog.js"></script>
+<script src="../js/header.js"></script>
 
 </html>
 <?php

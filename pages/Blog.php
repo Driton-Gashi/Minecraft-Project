@@ -2,7 +2,7 @@
 session_start();
 $_SESSION['previous_location'] = 'Blog';
 
-if (isset($_SESSION['id'])) {
+if (isset($_SESSION['username'])) {
     require '../php/db_conn.php';
 ?>
 <!DOCTYPE html>
@@ -24,13 +24,17 @@ if (isset($_SESSION['id'])) {
     <div class="background">
         <?php include '../includes/header.php' ?>
 
-        <div v class="hero">
+        <div class="hero">
 
             <div class="left-side">
                 <div class="content">
+
                     <?php
                         if ($_SESSION['role'] == 'admin') {
                         ?>
+                    <div style="width: 700px;text-align: left;">
+                        <h1 class="create-post-title">Create Post</h1>
+                    </div>
                     <div class="post ">
                         <form action="../php/create-post.php" class="post-form" method="post"
                             enctype="multipart/form-data">
@@ -65,15 +69,17 @@ if (isset($_SESSION['id'])) {
                         <div class="right">
 
                             <form action="../php/edit.php" method="post">
-                                <input disabled type="text" class="post-title" name="title"
-                                    value="<?= $post['title'] ?>">
+                                <a class="title-link" href="../pages/single.php?id=<?= $post['id'] ?>"><input disabled
+                                        type="text" class="post-title" name="title" value="<?= $post['title'] ?>"></a>
                                 <textarea disabled class="post-content"
                                     name="content"><?php echo strlen($post['content']) > 550 ? substr($post['content'], 0, 547) . '...' : $post['content']; ?></textarea>
                                 <!-- <button class="read-more">Read more</button> -->
                                 <div class="post-footer">
                                     <div class="post-footer__author">
-                                        By: <a href="#"><?= $post['author'] ?></a> &ThickSpace; &ThickSpace;Date: <a
-                                            href="#"><?= $post['date'] ?></a>
+                                        <span class="j"> By: <a
+                                                href="./Author.php?author=<?= $post['author'] ?>"><?= $post['author'] ?></a></span>
+                                        <span class="k"> &ThickSpace; &ThickSpace;Date: <a
+                                                href="#"><?= $post['date'] ?></a></span>
                                     </div>
                                     <?php
                                             if ($_SESSION['role'] == 'admin') {
@@ -88,8 +94,11 @@ if (isset($_SESSION['id'])) {
                                             }
                                             ?>
                                     <div class="footer-button red hide cancel">Cancel</div>
-                                    <a href="../php/delete.php?id=<?php echo $post['id'] ?>"
-                                        class="footer-button red delete">Delete</a>
+                                    <?php
+                                            if ($_SESSION['role'] == 'admin') { ?>
+                                    <div onclick="deletePost(<?= $post['id'] ?>)" class="footer-button red delete">
+                                        Delete</div>
+                                    <?php } ?>
                                     <button type="submit" class="footer-button green hide confirm">Confirm</button>
                                     <input type="hidden" name="id" value="<?php echo $post['id'] ?>">
                                 </div>
@@ -102,25 +111,43 @@ if (isset($_SESSION['id'])) {
                         }
                         ?>
                 </div>
-            </div>
-            <div class="right-side">
                 <ul class="dashboard">
                     <li>
                         User: <?= $_SESSION['username'] ?>
                     </li>
                     <li>
-                        Number of posts: <?= count($posts) ?>
+                        Total posts: <?= count($posts) ?>
                     </li>
+                    <?php
+                        if ($_SESSION['role'] == 'admin') {
+                        ?>
+                    <li>
+                        <?php
+                                try {
+                                    $query = $pdo->prepare('SELECT * FROM posts WHERE author = :author');
+                                    $query->bindParam(':author', $_SESSION['username']);
+                                    $query->execute();
+                                    $postsByMe = $query->fetchAll();
+                                    echo 'Posts by me: ' . count($postsByMe);
+                                } catch (PDOException $e) {
+                                    echo "fail: " . $e->getMessage();
+                                ?>
+                    </li>
+                    <?php
+                                }
+                            }
+                    ?>
                     <li>Role: <?= $_SESSION['role'] ?></li>
 
                 </ul>
             </div>
         </div>
     </div>
+
     <?php include '../includes/footer.php' ?>
 </body>
-<script src="../js/blog.js"></script>
 <script src="../js/header.js"></script>
+<script src="../js/blog.js"></script>
 
 </html>
 <?php

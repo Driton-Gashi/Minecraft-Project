@@ -20,7 +20,7 @@
                     or with friends</p>
             </div>
             <div class="footer-section">
-                <h3>Quick Links</h3>
+                <h3 class="footer-quickLink">Quick Links</h3>
                 <ul>
                     <li><a href="#top">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -28,7 +28,7 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Contact</h3>
+                <h3 class="footer-contact">Contact</h3>
                 <p>123 Lorem ipsum.</p>
                 <p>Peje, 30000</p>
                 <p>04* *** ***</p>
@@ -46,3 +46,18 @@
         </div>
     </div>
 </footer>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function() {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/63e0b1f0c2f1ac1e2031a011/1goirgkrr';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->

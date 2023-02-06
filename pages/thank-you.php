@@ -15,7 +15,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     <title>Minecraft Project - Homepage</title>
     <link rel="stylesheet" href="../css/homepage.css" />
     <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/slider.css" />
 </head>
 
 <!-- Loading Effect -->

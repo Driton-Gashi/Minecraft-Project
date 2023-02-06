@@ -1,26 +1,29 @@
 .background {
   height: auto;
 }
-.hero {
+.background .hero {
   min-height: 100vh;
   display: flex;
+  align-items: stretch;
   font-family: myFont;
 }
 .left-side {
-  width: 70%;
+  width: 100%;
   height: auto;
   padding: 12vh 2em;
   color: green;
   background: #222;
 }
-.right-side {
-  width: 30%;
-  height: auto;
-  padding: 12vh 2em;
-  background: #111;
-  color: green;
+.dashboard {
+  display: inline-block;
+  position: fixed;
+  top: 12vh;
+  background-color: #191919;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 1.5em;
+  z-index: 999;
 }
-
 .dashboard li {
   list-style: none;
 }
@@ -37,7 +40,7 @@
   background-color: #111;
   padding: 1em;
   margin: 1em;
-  width: 700px;
+  width: 800px;
   border-radius: 5px;
   border: 1px solid #333;
   transition: 0.3s ease all;
@@ -71,14 +74,22 @@
   outline: none;
   border: 0;
   width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
 }
-
+.title-link {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+}
 .post-content {
   font-size: 1em;
   margin-bottom: 1em;
   height: auto;
   height: 160px;
   overflow: hidden;
+  text-overflow: ellipsis;
   color: #777;
   transition: 0.4s ease all;
   position: relative;
@@ -89,6 +100,7 @@
   resize: none;
   border: 0;
 }
+
 .post-content.active {
   height: 310px !important;
 }
@@ -105,7 +117,9 @@
 .border {
   border: 1px solid #777;
 }
-
+.post-content::-webkit-scrollbar-track {
+  background-color: #111;
+}
 .post-footer .footer-button {
   padding: 0.3em 1em;
   cursor: pointer;
@@ -131,7 +145,7 @@
 }
 .message-box.green,
 .message-box.red {
-  width: 700px;
+  width: 800px;
   padding: 1em;
   background-color: rgba(0, 128, 0, 0.5);
   color: #fff;
@@ -225,4 +239,28 @@
 }
 .post-button:hover {
   background-color: rgb(0, 109, 0);
+}
+
+.background .hero {
+  height: auto !important;
+}
+@media (max-width: 768px) {
+  .post {
+    width: 100%;
+  }
+  .post-footer__author {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  .post-content {
+    margin-bottom: 1.1em;
+  }
+  .post-footer {
+    left: 0;
+  }
+  .j {
+    margin-left: 1em;
+  }
 }

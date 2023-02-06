@@ -137,7 +137,6 @@ const removeClass = (e) => {
     }
   });
 };
-
 const images = document.querySelectorAll(".profile img");
 
 images.forEach((image) => {
@@ -151,3 +150,12 @@ images.forEach((image) => {
     image.src = "../assets/img/icons/profile-image(default).png";
   }
 });
+const menu = document.querySelector(".menu");
+const showMenu = () => {
+  menu.classList.add("active");
+  document.body.classList.add("noScroll");
+};
+const hideMenu = () => {
+  menu.classList.remove("active");
+  document.body.classList.remove("noScroll");
+};

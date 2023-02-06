@@ -16,11 +16,15 @@ let message = "";
 loginButton.addEventListener("mouseover", () => {
   if (validation(username)) {
     loginErrorMessage.classList.remove("hide");
+    registerErrorMessage.classList.remove("successful");
+
     loginButton.classList.toggle("wrong-password");
     loginErrorMessage.textContent = message;
     return;
   } else if (validation(password)) {
     loginErrorMessage.classList.remove("hide");
+    registerErrorMessage.classList.remove("successful");
+
     loginButton.classList.toggle("wrong-password");
     loginErrorMessage.textContent = message;
     return;
@@ -33,18 +37,24 @@ loginButton.addEventListener("mouseover", () => {
 registerButton.addEventListener("mouseover", () => {
   if (validation(usernameRegister)) {
     registerErrorMessage.classList.remove("hide");
+    registerErrorMessage.classList.remove("successful");
+
     registerButton.classList.toggle("wrong-password");
     registerErrorMessage.textContent = message;
     return;
   } else if (validation(passwordRegister)) {
     registerErrorMessage.classList.remove("hide");
+    registerErrorMessage.classList.remove("successful");
+
     registerButton.classList.toggle("wrong-password");
     registerErrorMessage.textContent = message;
     return;
-  } else if (confirmPassword !== passwordRegister) {
-    loginErrorMessage.classList.remove("hide");
-    loginButton.classList.toggle("wrong-password");
-    loginErrorMessage.textContent =
+  } else if (confirmPassword.value != passwordRegister.value) {
+    registerErrorMessage.classList.remove("hide");
+    registerErrorMessage.classList.remove("successful");
+
+    registerButton.classList.toggle("wrong-password");
+    registerErrorMessage.textContent =
       '"Confirm Password" should be same as "Password"';
     return;
   } else {
@@ -92,4 +102,10 @@ loginBtn.addEventListener("click", () => {
   registerForm.classList.toggle("hide");
   loginErrorMessage.textContent = "";
   registerErrorMessage.textContent = "";
+});
+
+document.querySelector(".guest-btn").addEventListener("click", (e) => {
+  setTimeout(() => {
+    window.location = "./php/guest.php";
+  }, 200);
 });

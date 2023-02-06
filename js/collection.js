@@ -52,7 +52,9 @@ function like(id, table) {
   xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
+      console.log("xhttp request was successful");
     } else {
+      console.log("xhttp request failed");
     }
   };
 

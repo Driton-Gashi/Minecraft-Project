@@ -15,6 +15,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     <link rel="icon" href="./assets/img/icons/favicon.ico" type="image/x-icon" />
     <title>Login</title>
     <link rel="stylesheet" href="./css/index.css" />
+
 </head>
 <!-- Loading Effect -->
 
@@ -30,10 +31,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
         document.body.classList.remove("noScroll");
     })
     </script>
-    <img src="./assets/img/site-under-construction.jpg" alt="" class="under-construction">
     <section id="sign-up">
-
         <section class="sign-up-wrapper">
+            <button onclick="continueAsGuest(e)" class="guest-btn">Continue as Guest</button>
+
             <div class="sign-up-form">
                 <form action="./php/login.php" method="post"
                     class="<?= isset($_SESSION['LoginStatus']) ? $_SESSION['LoginStatus'] : "" ?> login">

@@ -176,6 +176,7 @@
   font-family: myFont;
   font-size: 1em;
   border-radius: 4px;
+  border: 0;
 }
 .file-input {
   background-color: #333;
@@ -192,12 +193,60 @@
   border-radius: 4px;
   font-weight: 500;
 }
+.mob-button:hover {
+  background-color: rgb(0, 100, 0);
+}
 .name-label {
   font-size: 1.5em;
   margin-bottom: 0.3em;
   color: green;
+  text-transform: capitalize;
 }
 .file-label {
   font-size: 1.5em;
   color: green;
+  text-transform: capitalize;
+}
+@media (max-width: 768px) {
+  .collection-btn {
+    padding: 0.5em 1em;
+    margin: 0 0.1em;
+  }
+  .collection-header {
+    padding: 1em 1em 1em 0;
+  }
+  .post {
+    width: 80%;
+  }
+}
+@media (max-width: 580px) {
+  .collection-header {
+    flex-direction: column-reverse;
+  }
+  .collection-btn {
+    padding: 0.5em 1.2em;
+  }
+  .collection-buttons-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1em;
+  }
+  .collection-title {
+    font-size: 1.9em;
+  }
+  .collection-search-wrapper {
+    width: 80%;
+  }
+  .collection-search-input {
+    width: 100%;
+  }
+  .name-label,
+  .file-label {
+    font-size: 1.2em;
+  }
+  .post form .mob_name,
+  .file-input {
+    font-size: 0.9em;
+  }
 }

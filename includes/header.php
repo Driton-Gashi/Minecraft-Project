@@ -6,6 +6,7 @@
     </div>
     <nav>
         <ul class="menu">
+            <i onclick="hideMenu()" class="bi bi-x-square close"></i>
             <li><a href="./Home.php">Home</a></li>
             <li><a href="./Home.php#about">About</a></li>
             <li><a href="./Home.php#contact">Contact</a></li>
@@ -29,15 +30,14 @@
         </ul>
     </nav>
     <div class="header-icons">
+        <i onclick="showMenu()" class="bi bi-list burger"></i>
         <i class="bi bi-volume-up-fill unMute "></i>
         <i class="bi bi-volume-mute-fill mute hide"></i>
         <div class="profile ">
-            <img src="../php/uploads/profiles/<?php echo $_SESSION['image'] ?>" alt="">
+            <img src="../php/uploads/profiles/<?= $_SESSION['image'] ?>" alt="">
             <ul class="profile-menu hide">
                 <li onclick="changeName()" class="edit-profile-li"><i class="bi bi-person-circle"></i>
-                    <div class="edit-profile-text-wrapper"> Edit Username &ThinSpace; </div><input
-                        title="Press Enter to save changes" disabled class="name" type="text"
-                        value="<?php echo $_SESSION['username'] ?>">
+                    <div class="edit-profile-text-wrapper"> Edit Username &ThinSpace; </div><input title="Press Enter to save changes" disabled class="name" type="text" value="<?php echo $_SESSION['username'] ?>">
                 </li>
                 <li class="status-wrapper"><i class="bi bi-chat-dots"></i>
                     <select title="Change your status" onchange="statusChange()" class="status" name="" id="">
