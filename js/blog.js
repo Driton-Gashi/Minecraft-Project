@@ -65,8 +65,8 @@ cancelButton.forEach((button, index) => {
     const confirm = e.target.parentNode.childNodes[9];
     e.target.classList.add("hide");
     edit.classList.remove("hide");
-    titleInput.removeAttribute("disabled");
-    contentInput.removeAttribute("disabled");
+    titleInput.disabled = true;
+    contentInput.disabled = true;
     titleInput.classList.remove("border");
     contentInput.classList.remove("border");
     deleteB.classList.remove("hide");

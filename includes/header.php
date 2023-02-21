@@ -37,7 +37,9 @@
             <img src="../php/uploads/profiles/<?= $_SESSION['image'] ?>" alt="">
             <ul class="profile-menu hide">
                 <li onclick="changeName()" class="edit-profile-li"><i class="bi bi-person-circle"></i>
-                    <div class="edit-profile-text-wrapper"> Edit Username &ThinSpace; </div><input title="Press Enter to save changes" disabled class="name" type="text" value="<?php echo $_SESSION['username'] ?>">
+                    <div class="edit-profile-text-wrapper"> Edit Username &ThinSpace; </div><input
+                        title="Press Enter to save changes" disabled class="name" type="text"
+                        value="<?php echo $_SESSION['username'] ?>">
                 </li>
                 <li class="status-wrapper"><i class="bi bi-chat-dots"></i>
                     <select title="Change your status" onchange="statusChange()" class="status" name="" id="">
@@ -47,7 +49,21 @@
                         <option value="invisible">Invisible</option>
                     </select>
                 </li>
-                <li><i class="bi bi-gear-fill"></i> Settings</li>
+                <?php
+                if ($_SESSION['role'] !== 'admin') {
+                ?>
+                <li>
+                    <i class="bi bi-gear-fill"></i> Settings
+
+                </li>
+                <?php } else { ?>
+                <li onclick="(()=>{
+                window.location = './Dashboard.php'
+              })()">
+                    <i class="bi bi-pencil-square"></i> Admin Dashboard
+
+                </li>
+                <?php } ?>
                 <li onclick="logOut()"><i class="bi bi-box-arrow-left"></i> Log Out</li>
             </ul>
         </div>

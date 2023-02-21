@@ -343,8 +343,7 @@ header.header-aktive .btn {
   font-weight: lighter;
   padding-bottom: 0.1em;
 }
-
-.sign-up-form .username {
+register .sign-up-form .username {
   width: 100%;
   padding: 0.5em;
   margin-bottom: 1em;
@@ -356,7 +355,7 @@ header.header-aktive .btn {
 }
 
 .sign-up-form .password,
-.confirm-password {
+.sign-up-form .confirm-password {
   width: 100%;
   padding: 0.5em;
   border-radius: 3px;
@@ -371,7 +370,8 @@ header.header-aktive .btn {
   border: 0;
   margin-bottom: 1em;
 }
-.sign-up-form button {
+.sign-up-form button,
+.register button {
   margin-top: 0.5em;
   padding: 0.6em 2em;
   font-family: myFont;

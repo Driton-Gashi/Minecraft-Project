@@ -66,7 +66,7 @@
   position: relative;
 }
 .post-title {
-  font-size: 1.7em;
+  font-size: 1.3em;
   margin-bottom: 0.3em;
   font-weight: bold;
   color: #777;
@@ -77,6 +77,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
+  border: 1px solid transparent;
 }
 .title-link {
   display: inline-block;
@@ -84,6 +85,7 @@
   width: 100%;
 }
 .post-content {
+  border: 1px solid transparent;
   font-size: 1em;
   margin-bottom: 1em;
   height: auto;
@@ -98,7 +100,6 @@
   background-color: transparent;
   text-align: left;
   resize: none;
-  border: 0;
 }
 
 .post-content.active {

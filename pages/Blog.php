@@ -46,6 +46,7 @@ if (isset($_SESSION['username'])) {
                                 placeholder="Post content Here..."></textarea>
                             <h1 class="file-label">Upload Image:</h1>
                             <input type="file" name="image" class="file-input">
+                            <input type="hidden" name="authorID" value="<?= $_SESSION['id'] ?>">
                             <button type="submit" class="post-button">Publish new post</button>
                         </form>
                     </div>
@@ -64,7 +65,7 @@ if (isset($_SESSION['username'])) {
                         $posts = $query->fetchAll();
                         foreach ($posts as $post) { ?>
                     <div class="post">
-                        <div class="left"><img src="../php/uploads/<?php echo $post['image'] ?>" alt="">
+                        <div class="left"><img src="../php/uploads/posts/<?php echo $post['image'] ?>" alt="">
                         </div>
                         <div class="right">
 

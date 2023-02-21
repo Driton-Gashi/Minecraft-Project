@@ -6,8 +6,14 @@ $_SESSION['RegisterStatus'] = "";
 $_SESSION['LoginStatus'] = "hide";
 
 if (!isset($_POST['usernameRegister']) || !isset($_POST['passwordRegister']) || !isset($_POST['confirmPassword'])) {
-    header("Location: ../index.php");
+    if ($_SESSION['previous_location'] == 'dashboard') {
+        $_SESSION['message'] = "Please fill all fields!";
+        header("Location: ../pages/Dashboard.php");
+    } else {
+        header("Location: ../pages/Home.php");
+    }
 }
+
 
 require './db_conn.php';
 function validate($data)
@@ -35,13 +41,13 @@ if (isset($_POST['usernameRegister'])) {
     }
 }
 if (empty($_POST['usernameRegister']) || strlen($_POST['usernameRegister']) < 6 || strlen($_POST['usernameRegister']) > 22) {
-    header("Location: ../");
+    header("Location: ../?line=44");
     $_SESSION['message'] = 'Username should be at least 6 characters and max 22 characters';
 } else if (empty($_POST['passwordRegister']) || strlen($_POST['passwordRegister']) < 6 || strlen($_POST['passwordRegister']) > 22) {
-    header("Location: ../");
+    header("Location: ../?line=47");
     $_SESSION['message'] = 'Password should be at least 6 characters and max 22 characters';
 } else if (empty($_POST['confirmPassword']) || strcmp($_POST['passwordRegister'], $_POST['confirmPassword']) !== 0) {
-    header("Location: ../");
+    header("Location: ../?line=50");
     $_SESSION['message'] = 'Confirm Password is not the same as Password';
 } else if (isset($_POST['usernameRegister']) && isset($_FILES['image']) && isset($_POST['passwordRegister']) && isset($_POST['confirmPassword'])) {
     $name = validate($_POST['usernameRegister']);
@@ -56,9 +62,16 @@ if (empty($_POST['usernameRegister']) || strlen($_POST['usernameRegister']) < 6 
     $query->bindParam(':image', $file_name);
 
     if ($query->execute()) {
-        $_SESSION['message'] = "Successfully created your account, you can login now!";
         $_SESSION['class'] = 'successful';
-        header("Location: ../pages/Home.php");
+        if ($_SESSION['previous_location'] == 'dashboard') {
+            $_SESSION['message'] = "You just created a new Account!";
+
+            header("Location: ../pages/Dashboard.php");
+        } else {
+            $_SESSION['message'] = "Successfully created your account, you can login now!";
+
+            header("Location: ../pages/Home.php?line=73");
+        }
     } else {
         "A problem occurred creating your account";
         header("Location: ../");

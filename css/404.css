@@ -1,49 +1,62 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Fira+Mono:wght@500&display=swap");
+body {
+  height: 95vh;
+  background: #000000;
+  text-align: center;
+  color: #e0e0e0;
+  font-family: "Fira Mono", monospace;
 }
-@font-face {
-  font-family: minecraft-font;
-  src: url(../assets/font/Minecraft_font.ttf);
+h1 {
+  font-size: 2.5rem;
+  font-family: "Permanent Marker", cursive;
 }
-main {
-  width: 100%;
-  height: 100vh;
-  background: url(../assets/img/background/404page.webp);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+div {
+  transform-style: preserve-3d;
 }
-.content {
-  font-family: minecraft-font;
-  font-weight: lighter;
+svg {
+  width: clamp(300px, 70%, 600px);
+  height: 500px;
 }
-.main-text {
-  font-size: 7em;
-  padding-bottom: 0.1em;
-  color: rgba(0, 0, 0, 0.5);
+#rocket {
+  transform: translateY(750px);
+
+  animation: launch 2s ease-out forwards;
 }
-.second-text {
-  padding-bottom: 0.5em;
+
+@keyframes launch {
+  from {
+    transform: translateY(750px);
+  }
+  to {
+    perspective: 500px;
+    transform: translateY(0px);
+  }
 }
-.button {
-  margin-top: 2em;
-  border: 0;
-  outline: none;
-  font-family: minecraft-font;
-  font-weight: lighter;
-  backdrop-filter: blur(3px);
-  transition: 0.2s ease all;
-  cursor: pointer;
-  background-color: pink;
-  padding: 1em 2em;
-  padding-top: 0.8em;
-  border-radius: 50px;
+#stars {
+  animation: twinkling 2s linear;
 }
-.button:hover {
-  transform: translateY(-5px);
+@keyframes twinkling {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.text {
+  opacity: 0;
+  animation: appear 1s ease-in forwards;
+  animation-delay: 1.8s;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+a {
+  color: #f66947;
+  text-decoration: none;
 }
