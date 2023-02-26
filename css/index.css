@@ -236,7 +236,7 @@ header.header-aktive .btn {
 }
 
 .profile-menu {
-  border: 1px solid green;
+  border: 1px solid #444;
   min-width: 250px;
   position: absolute;
   top: 100%;
@@ -254,7 +254,7 @@ header.header-aktive .btn {
   color: #fff;
   width: 100%;
   font-size: 0.8em;
-  border-bottom: 1px solid rgba(0, 128, 0, 0.4);
+  border-bottom: 1px solid #333;
   padding: 0.5em;
   display: flex;
   justify-content: start;
@@ -343,7 +343,8 @@ header.header-aktive .btn {
   font-weight: lighter;
   padding-bottom: 0.1em;
 }
-register .sign-up-form .username {
+.register,
+.login {
   width: 100%;
   padding: 0.5em;
   margin-bottom: 1em;
@@ -355,7 +356,8 @@ register .sign-up-form .username {
 }
 
 .sign-up-form .password,
-.sign-up-form .confirm-password {
+.sign-up-form .confirm-password,
+.sign-up-form .username {
   width: 100%;
   padding: 0.5em;
   border-radius: 3px;
@@ -454,7 +456,7 @@ button.wrong-password {
   cursor: pointer;
 }
 .ghast:hover {
-  filter: drop-shadow(0.5rem 0.5rem 1rem #e23);
+  filter: drop- (0.5rem 0.5rem 1rem #e23);
 }
 
 @keyframes ghastMove {
@@ -736,6 +738,81 @@ footer {
 
 .guest-btn:active {
   margin-bottom: -2px;
+}
+.inbox-wrapper {
+  position: fixed;
+  width: 50%;
+  height: 100vh;
+  background-color: #222;
+  top: 0;
+  z-index: 999;
+  left: -100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: #fff;
+  font-family: myFont;
+  transition: 0.4s ease all;
+  overflow: auto;
+  padding-bottom: 2em;
+}
+.inbox-wrapper.active {
+  left: 0;
+}
+
+.inbox-message:last-child {
+  padding-bottom: 2em;
+}
+.inbox-message {
+  padding: 1em;
+  border-bottom: 1px solid #555;
+  position: relative;
+  left: 0;
+  background-color: #333;
+  height: 115px;
+  transition: 0.4s ease all;
+}
+.inbox-message.deleted {
+  left: -100%;
+}
+.inbox-message-content {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.delete-message {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(125, 0, 0);
+  padding: 0.5em;
+  cursor: pointer;
+  transition: 0.2s ease all;
+}
+.delete-message:hover {
+  background-color: rgb(150, 0, 0);
+}
+.inbox-message-author-details a {
+  color: green;
+}
+.inbox-wrapper .close-inbox {
+  border-radius: 0;
+  color: #fff;
+  display: inline-block;
+  padding: 0.9em 1em 0.7em 1em;
+  background: rgb(128, 0, 0);
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  transition: 0.2s ease background;
+}
+.inboxWarning {
+  font-size: 1.5em;
+  padding: 1em;
+  color: rgb(150, 0, 0);
+}
+.inbox-header {
+  border-bottom: 1px;
+  padding: 1em;
+  text-align: center;
 }
 @media (max-width: 1200px) {
   .guest-btn {

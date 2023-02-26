@@ -33,7 +33,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
         </script>
         <section id="sign-up">
             <section class="sign-up-wrapper">
-                <button onclick="continueAsGuest(e)" class="guest-btn">Continue as Guest</button>
+                <button onclick="continueAsGuest()" class="guest-btn">Continue as Guest</button>
 
                 <div class="sign-up-form">
                     <form action="./php/login.php" method="post" class="<?= isset($_SESSION['LoginStatus']) ? $_SESSION['LoginStatus'] : "" ?> login">

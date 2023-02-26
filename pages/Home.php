@@ -54,31 +54,26 @@ if (isset($_SESSION['username'])) {
         <section class="contact" id="contact">
 
             <div class="form-wrapper">
-                <form action="https://formsubmit.co/dritongashi1995@gmail.com" method="POST">
+                <form action="../php/sendEmail.php" method="GET">
                     <h1 class="contact-us">Contact Us</h1>
 
                     <div class="center">
-                        <!-- <h1 class="username-label">Username</h1>
-              <input  class="username" type="text" > -->
-
-                        <input type="hidden" name="_subject" value="Message From Your Website">
-
                         <h1 class="username-label">Name</h1>
                         <input class="contact-username" type="text" name="name" required placeholder="Your Name" id="name">
 
                         <h1 class="email-label">Email</h1>
                         <input class="email" type="email" name="email" required placeholder="Email Address" id="email">
 
-                        <input type="hidden" name="_next" value="https://dritoni-shota.netlify.app/">
-
                         <h1 class="message-label">Message</h1>
                         <textarea style="resize: none;" maxlength="240" class="message" placeholder="Your Message" class="form-control" name="message" rows="6" required id="text-area"></textarea>
-                        <input type="hidden" name="_autoresponse" value="Ne sapo morrem mesazhin tuaj dhe do ju pergjigjemi se shpejti">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_cc" value="ermalmusaj0@gmail.com">
-                        <input type="hidden" name="_subject" value="Message from your Minecraft Website">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="http://dritoni-shota.great-site.net/pages/thank-you.php#contact">
+                        <?php
+                        if (isset($_SESSION['EmailMessage'])) {
+                        ?>
+                            <h3 style="padding-bottom: 0.5em;font-weight: lighter;color:<?= $_SESSION['color'] ?> ;">
+                                <?= $_SESSION['EmailMessage'] ?>
+                            </h3>
+                        <?php }
+                        ?>
                         <button class="contact-btn" type="submit" id="btn">Send</button>
                     </div>
                 </form>

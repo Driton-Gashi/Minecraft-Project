@@ -1,7 +1,6 @@
 <?php
 session_start();
 $_SESSION['previous_location'] = 'dashboard';
-
 if (isset($_SESSION['role']) && $_SESSION['role']  == 'admin') {
     require '../php/db_conn.php';
     $query = $pdo->prepare('SELECT * FROM users');
@@ -28,11 +27,13 @@ if (isset($_SESSION['role']) && $_SESSION['role']  == 'admin') {
         <?php include '../includes/loadingAndMusic.php' ?>
         <div class="background">
             <?php include '../includes/header.php' ?>
+            <div class="messagesWrapper">
+            </div>
             <div class="table-wrapper">
-                <form action="../php/register.php" method="post" class="register hideLeft" enctype="multipart/form-data">
+                <form action="../php/register.php" method="post" class="register hideLeft on-dashboard" enctype="multipart/form-data">
                     <img class="logo" src="../assets/img/icons/Minecraft-Logo.png" alt="" />
+                    <div onclick="hideRegisterForm()" class="closeRegisterBtn"><i class="bi bi-x-lg"></i></div>
                     <div class="center">
-
                         <h3 class="username-label">Username</h3>
                         <input name="usernameRegister" class="username r" type="text" />
 
@@ -52,7 +53,7 @@ if (isset($_SESSION['role']) && $_SESSION['role']  == 'admin') {
                             } ?>
                         </h1>
 
-                        <button class="r" type="submit">Register</button>
+                        <button class="r" type="submit">Add New User</button>
                     </div>
                 </form>
                 <div class="search-wrapper">
@@ -67,9 +68,9 @@ if (isset($_SESSION['role']) && $_SESSION['role']  == 'admin') {
                 <table>
 
                     <tr class="first-row">
-                        <th>Profile Img</th>
+                        <th>Avatar</th>
                         <th>Username</th>
-                        <th>Password (Encrypted)</th>
+                        <th>Password <span class="encrypted">(Encrypted)</span></th>
                         <th>Role</th>
                         <th>Action</th>
                     </tr>
@@ -99,11 +100,13 @@ if (isset($_SESSION['role']) && $_SESSION['role']  == 'admin') {
                                     </div>
                                 </td>
                             </form>
+
                         </tr>
                     <?php } ?>
                     <tr class="row">
-                        <th class="row" colspan="5">
-                            <div onclick="showRegisterForm()" class="addUserBtn">Add New User</div>
+                        <th style="cursor:default;" colspan="5">
+                            <div onclick="showRegisterForm()" class="addUserBtn 
+                        ">Add New User</div>
                         </th>
 
                     </tr>

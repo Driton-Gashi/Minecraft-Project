@@ -159,3 +159,36 @@ const hideMenu = () => {
   menu.classList.remove("active");
   document.body.classList.remove("noScroll");
 };
+
+const inboxWrapper = document.querySelector(".inbox-wrapper");
+const showInbox = () => {
+  inboxWrapper.classList.add("active");
+};
+const hideInbox = () => {
+  inboxWrapper.classList.remove("active");
+};
+
+const deleteInboxMessage = (id) => {
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log("xhttp request was successful");
+    } else {
+      console.log("xhttp request failed");
+    }
+  };
+  xhttp.open("GET", `../php/deleteInbox.php?id=${id}`, true);
+  xhttp.send();
+};
+
+const deleteMessageBtn = document.querySelectorAll(".delete-message");
+
+deleteMessageBtn.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.target.closest(".inbox-message").classList.add("deleted");
+
+    setTimeout(() => {
+      e.target.closest(".inbox-message").classList.add("hide");
+    }, 500);
+  });
+});

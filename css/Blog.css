@@ -245,6 +245,11 @@
 .background .hero {
   height: auto !important;
 }
+@media (max-width: 1268px) {
+  .dashboard {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .post {
     width: 100%;

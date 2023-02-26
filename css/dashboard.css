@@ -31,7 +31,6 @@
   transition: 0.8s ease all;
 }
 .table-wrapper table tr {
-  cursor: pointer;
   transition: 0.7s ease left, 0.4s ease background;
   position: relative;
   left: 0;
@@ -110,8 +109,12 @@
 }
 .search-wrapper {
   display: flex;
-  padding: 2em 0;
   justify-content: center;
+  padding-top: 5em;
+  padding-bottom: 2em;
+}
+.pt2em {
+  padding-top: 2em !important;
 }
 .search-wrapper .user-input {
   border: 0;
@@ -153,7 +156,7 @@
 }
 
 /* Register user in Dashboard style */
-.register {
+.register.on-dashboard {
   font-family: myFont;
   width: 500px;
   color: #fff;
@@ -166,6 +169,21 @@
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: 0.5s ease all;
+  z-index: 1;
+}
+.closeRegisterBtn {
+  display: inline-block;
+  padding: 0.9em 1em 0.7em 1em;
+  background: rgb(128, 0, 0);
+  border-top-right-radius: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  transition: 0.2s ease background;
+}
+.closeRegisterBtn:hover {
+  background: rgb(150, 0, 0);
 }
 .register .logo {
   width: 250px;
@@ -180,7 +198,7 @@
   margin-bottom: 1em;
 }
 .hideLeft {
-  position: absolute;
+  position: absolute !important;
   left: -100%;
 }
 .addUserBtn {
@@ -192,4 +210,43 @@
   font-family: myFont;
   margin: 0.5em;
   z-index: 3;
+  font-weight: lighter;
+  transition: 0.2s ease background;
+  cursor: pointer;
+}
+.addUserBtn:hover {
+  background-color: rgb(0, 150, 0);
+}
+.dashboard-switch {
+  background: transparent;
+  color: #fff;
+  border: 0;
+  font-family: "myFont";
+  font-size: 1.2 em;
+}
+@media (max-width: 1024px) {
+  .table-wrapper {
+    width: 95%;
+  }
+}
+
+@media (max-width: 863px) {
+  .tableBtn {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 834px) {
+  .tableBtn {
+    font-size: 0.8em;
+    padding: 0.5em 0.5em;
+  }
+}
+@media (max-width: 768px) {
+  .button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding-top: 0.2em;
+  }
 }

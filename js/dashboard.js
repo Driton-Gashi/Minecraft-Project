@@ -205,6 +205,19 @@ const validation = (e) => {
 };
 
 const registerForm = document.querySelector(".register");
+const searchWrapper = document.querySelector(".search-wrapper");
 const showRegisterForm = () => {
   registerForm.classList.remove("hideLeft");
+  searchWrapper.classList.add("pt2em");
+  setTimeout(() => {
+    if (window.location.href.includes("#top")) {
+      window.location = window.location.href;
+    } else {
+      window.location = window.location.href + "#top";
+    }
+  }, 600);
+};
+const hideRegisterForm = () => {
+  registerForm.classList.add("hideLeft");
+  searchWrapper.classList.remove("pt2em");
 };

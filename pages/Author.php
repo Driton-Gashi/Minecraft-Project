@@ -40,7 +40,7 @@ if (isset($_SESSION['username'])) {
                         $posts = $query->fetchAll();
                         foreach ($posts as $post) { ?>
                     <div class="post">
-                        <div class="left"><img src="../php/uploads/posts<?php echo $post['image'] ?>" alt="">
+                        <div class="left"><img src="../php/uploads/posts/<?php echo $post['image'] ?>" alt="">
                         </div>
                         <div class="right">
                             <form action="../php/edit.php" method="post">
