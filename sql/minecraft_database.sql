@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2023 at 11:27 AM
+-- Generation Time: Feb 26, 2023 at 01:27 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -52,6 +52,20 @@ CREATE TABLE `foods_data` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `messages`
+--
+
+CREATE TABLE `messages` (
+  `id` int(11) NOT NULL,
+  `message` varchar(1000) NOT NULL,
+  `author` varchar(50) NOT NULL,
+  `authorEmail` varchar(50) NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `mobs_data`
 --
 
@@ -68,8 +82,8 @@ CREATE TABLE `mobs_data` (
 --
 
 INSERT INTO `mobs_data` (`id`, `name`, `image`, `views`, `likes`) VALUES
-(1, 'Zombie', '1675516319zombie.png', 0, 19),
-(2, 'Skeleton', '1676991823skeleton.png', 0, 0);
+(1, 'Zombie', '1675516319zombie.png', 0, 21),
+(2, 'Skeleton', '1676991823skeleton.png', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -92,7 +106,8 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `title`, `content`, `date`, `author`, `image`, `authorID`) VALUES
-(1, 'Minecraft: A Game That Defines a Generation', 'Minecraft is a sandbox video game that has captured the hearts and minds of millions of players worldwide. Launched in 2011, the game has become a cultural phenomenon, attracting players of all ages and backgrounds.\r\n\r\nThe game is set in a randomly generated 3D world, where players can build and explore to their heart\'s content. The game mechanics are simple and intuitive, making it accessible to players of all skill levels. The objective of the game is to gather resources, build structures, and survive against monsters that come out at night.\r\n\r\nOne of the key features of Minecraft is its open-ended gameplay, allowing players to create and build whatever their imagination can conjure up. From towering skyscrapers to intricate underground tunnels, players have constructed some truly remarkable structures. The game also has a vibrant online community where players can share their creations and collaborate on projects.\r\n\r\nAnother important aspect of Minecraft is its educational value. The game has been used in classrooms around the world to teach subjects such as mathematics, science, and engineering. The game also fosters creativity, problem-solving skills, and teamwork, making it a valuable tool for students and teachers alike.\r\n\r\nDespite its age, Minecraft continues to evolve and grow, with new updates and features being added regularly. The game is available on a wide range of platforms, including PC, Xbox, PlayStation, Nintendo Switch, and mobile devices, ensuring that players can enjoy Minecraft wherever they go.\r\n\r\nIn conclusion, Minecraft is a game that has stood the test of time and has become a cornerstone of modern gaming culture. Whether you\'re a seasoned player or a newcomer, there\'s something in Minecraft for everyone. So why not give it a try and join the millions of players already building and exploring in the blocky world of Minecraft?\r\n\r\n\r\n\r\n', '2023-02-06', 'driton', '1675716908img-2.jpg', 0);
+(1, 'Minecraft: A Game That Defines a Generation', 'Minecraft is a sandbox video game that has captured the hearts and minds of millions of players worldwide. Launched in 2011, the game has become a cultural phenomenon, attracting players of all ages and backgrounds.\r\n\r\nThe game is set in a randomly generated 3D world, where players can build and explore to their heart\'s content. The game mechanics are simple and intuitive, making it accessible to players of all skill levels. The objective of the game is to gather resources, build structures, and survive against monsters that come out at night.\r\n\r\nOne of the key features of Minecraft is its open-ended gameplay, allowing players to create and build whatever their imagination can conjure up. From towering skyscrapers to intricate underground tunnels, players have constructed some truly remarkable structures. The game also has a vibrant online community where players can share their creations and collaborate on projects.\r\n\r\nAnother important aspect of Minecraft is its educational value. The game has been used in classrooms around the world to teach subjects such as mathematics, science, and engineering. The game also fosters creativity, problem-solving skills, and teamwork, making it a valuable tool for students and teachers alike.\r\n\r\nDespite its age, Minecraft continues to evolve and grow, with new updates and features being added regularly. The game is available on a wide range of platforms, including PC, Xbox, PlayStation, Nintendo Switch, and mobile devices, ensuring that players can enjoy Minecraft wherever they go.\r\n\r\nIn conclusion, Minecraft is a game that has stood the test of time and has become a cornerstone of modern gaming culture. Whether you\'re a seasoned player or a newcomer, there\'s something in Minecraft for everyone. So why not give it a try and join the millions of players already building and exploring in the blocky world of Minecraft?\r\n\r\n\r\n\r\n', '2023-02-06', 'driton', '1675716908img-2.jpg', 0),
+(6, 'Second Post', 'dasdasdsadas', '2023-02-26', 'Driton Gashi', '1677369337', 1);
 
 -- --------------------------------------------------------
 
@@ -132,7 +147,7 @@ INSERT INTO `users` (`id`, `user_name`, `password`, `image`, `role`) VALUES
 (4, 'JohnDoe', '$2y$10$apNDUjZshzVxF/QEzi27bO4naEnxY5nI0ScH5eUNDTg9cyyla8MYG', '1676886129johnDoe.webp', 'subscriber'),
 (5, 'Cupcake', '$2y$10$p8DNwmXSk723M/4VVBRhDu0X/jqQKy4IsbzKU2dKExXkxNdcnIWY2', '1676886343animeGirl.webp', 'subscriber'),
 (7, 'Monkey D. Luffy', '$2y$10$RKj8.mN6fJd9n/QDxJbj6OAlmT2WzK8kUrGV3fGvaoAhnpWMQH2VK', '1676888567luffy.webp', 'subscriber'),
-(10, 'EdiRugova', '$2y$10$.2iNHUESP0CLoKE6LFxTVe4.Vf5Uiuo2l0BRBd9W0XrchzQMZJbwm', '1676991688', 'subscriber');
+(12, 'Tringa', '$2y$10$XmUHJrYZq1sqG7kzz.4amuLoL27ZFXsp77c6uflTCFupsFUzj1e/O', '1677369168animeGirl.webp', 'subscriber');
 
 --
 -- Indexes for dumped tables
@@ -148,6 +163,12 @@ ALTER TABLE `blocks_data`
 -- Indexes for table `foods_data`
 --
 ALTER TABLE `foods_data`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `messages`
+--
+ALTER TABLE `messages`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -191,16 +212,22 @@ ALTER TABLE `foods_data`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `mobs_data`
 --
 ALTER TABLE `mobs_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tools_data`
@@ -212,7 +239,7 @@ ALTER TABLE `tools_data`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
