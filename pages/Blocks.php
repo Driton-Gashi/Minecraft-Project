@@ -23,47 +23,13 @@ if (isset($_SESSION['username'])) {
         <?php include '../includes/header.php' ?>
         <div class="hero">
             <!-- qeto posht e hek -->
-            <div class="slideshow">
+            
             <?php include
                     '../includes/slider.php';
                 // qetu punon Shota
                 get_slider(array('img' => 'new blocks.jpg', 'txt' => "New Blocks"), array('img' => 'boom.jpg', 'txt' => 'Booooooom!'), array('img' => 'tools.jpg', 'txt' => 'Gather Your Strength'), array('img' => 'friends.jpg', 'txt' => 'Unite. Fight. Survive'), array('img' => 'lapiz.png', 'txt' => 'I Thought I Found Diamonds'), array('img' => 'building.jpg', 'txt' => 'Bob The Builder'));
                 ?>
-                <div class="moving">
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/new blocks.jpg" alt="" />
-                        <h1 class="slide-box-text">New Blocks</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/boom.jpg" alt="" />
-                        <h1 class="slide-box-text">Booooooooom!</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/tools.jpg" alt="" />
-                        <h1 class="slide-box-text">Gather Your Strength</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/friends.jpg" alt="" />
-                        <h1 class="slide-box-text">Unite. Fight. Survive</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/lapiz.png" alt="" />
-                        <h1 class="slide-box-text">I Thought I Found Diamonds</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/building.jpg" alt="" />
-                        <h1 class="slide-box-text">Bob The Builder</h1>
-                    </div>
-                </div>
-                <div class="slider-command">
-                    <button onclick="forward()" class="slider-btn">
-                        <i class="bi bi-forward-fill"></i>
-                    </button>
-
-                    <button onclick="back()" class="slider-btn">
-                        <i class="bi bi-forward-fill"></i>
-                    </button>
-                </div>
+               
             </div>
         </div>
     </div>
