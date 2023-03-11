@@ -24,48 +24,14 @@ if (isset($_SESSION['username'])) {
             <?php include '../includes/header.php' ?>
             <div class="hero">
                 <!-- qeto posht e hek -->
-                <div class="slideshow">
-                    <!--
-                include '../includes/slider.php';
+                <?php include
+                    '../includes/slider.php';
                 // qetu punon Shota
-                get_slider(array('img' => 'hoe.jpg', 'txt' => "Y’all Know What They Call These"), array('img' => 'enderman.jpg', 'txt' => 'Don’t Look Now, It’s An Enderman!'), array('img' => 'creeper.jpg', 'txt' => 'Don’t Fear The Creeper'), array('img' => 'died.png', 'txt' => 'YOO F*** The Creeper'), array('img' => 'flexing.jpg', 'txt' => 'I’m Rich'), array('img' => 'lava.jpg', 'txt' => 'It’s Getting Hot In Here'));
-  -->
-                    <div class="moving">
-                        <div class="slide-box">
-                            <img src="../assets/img/slider/underwater.jpg" alt="" />
-                            <h1 class="slide-box-text">Explore The Underwater Wolrd</h1>
-                        </div>
-                        <div class="slide-box">
-                            <img src="../assets/img/slider/aquamen.jpg" alt="" />
-                            <h1 class="slide-box-text">Ku’ku’lkán</h1>
-                        </div>
-                        <div class="slide-box">
-                            <img src="../assets/img/slider/swords.jpg" alt="" />
-                            <h1 class="slide-box-text">Diamond's Always The Best</h1>
-                        </div>
-                        <div class="slide-box">
-                            <img src="../assets/img/slider/bows.jpg" alt="" />
-                            <h1 class="slide-box-text">Feeling Like Robin Hood</h1>
-                        </div>
-                        <div class="slide-box">
-                            <img src="../assets/img/slider/fortnite.jpg" alt="" />
-                            <h1 class="slide-box-text">The Thing From Fortnite</h1>
-                        </div>
-                        <div class="slide-box">
-                            <img src="../assets/img/slider/img-2.jpg" alt="" />
-                            <h1 class="slide-box-text">Surviving</h1>
-                        </div>
-                    </div>
-                    <div class="slider-command">
-                        <button onclick="forward()" class="slider-btn">
-                            <i class="bi bi-forward-fill"></i>
-                        </button>
-
-                        <button onclick="back()" class="slider-btn">
-                            <i class="bi bi-forward-fill"></i>
-                        </button>
-                    </div>
-                </div>
+                get_slider(array('img' => 'underwater.jpg', 'txt' => "Explore The Underwater Wolrd"), array('img' => 'aquamen.jpg', 'txt' => 'Ku’ku’lkán'), array('img' => 'swords.jpg', 'txt' => "Diamond's Always The Best"), array('img' => 'bows.jpg', 'txt' => 'Feeling Like Robin Hood'), array('img' => 'fortnite.jpg', 'txt' => 'The Thing From Fortnite'), array('img' => 'img-2.jpg', 'txt' => 'Surviving'));
+                ?>
+                    
+                   
+                
             </div>
         </div>
         <?php

@@ -25,47 +25,12 @@ if (isset($_SESSION['username'])) {
 
         <div class="hero">
             <!-- qeto posht e hek -->
-            <div class="slideshow">
-                <!--
-                include '../includes/slider.php';
+            <?php include
+                    '../includes/slider.php';
                 // qetu punon Shota
-                get_slider(array('img' => 'hoe.jpg', 'txt' => "Y’all Know What They Call These"), array('img' => 'enderman.jpg', 'txt' => 'Don’t Look Now, It’s An Enderman!'), array('img' => 'creeper.jpg', 'txt' => 'Don’t Fear The Creeper'), array('img' => 'died.png', 'txt' => 'YOO F*** The Creeper'), array('img' => 'flexing.jpg', 'txt' => 'I’m Rich'), array('img' => 'lava.jpg', 'txt' => 'It’s Getting Hot In Here'));
-  -->
-                <div class="moving">
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/zombies.jpg" alt="" />
-                        <h1 class="slide-box-text">Fighting Mobs.</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/cave.jpg" alt="" />
-                        <h1 class="slide-box-text">Searching for Warden</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/update.jpg" alt="" />
-                        <h1 class="slide-box-text">Enjoy The New Updates</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/dragon.jpg" alt="" />
-                        <h1 class="slide-box-text">Fight To Survive</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/creative.jpg" alt="" />
-                        <h1 class="slide-box-text">Build Something Amazing</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/pigmen.jpg" alt="" />
-                        <h1 class="slide-box-text">Jesse Pigmen</h1>
-                    </div>
-                </div>
-                <div class="slider-command">
-                    <button onclick="forward()" class="slider-btn">
-                        <i class="bi bi-forward-fill"></i>
-                    </button>
-
-                    <button onclick="back()" class="slider-btn">
-                        <i class="bi bi-forward-fill"></i>
-                    </button>
-                </div>
+                get_slider(array('img' => 'zombies.jpg', 'txt' => "Fighting Mobs."), array('img' => 'cave.jpg', 'txt' => 'Searching for Warden'), array('img' => 'update.jpg', 'txt' => 'Enjoy The New Updates'), array('img' => 'dragon.jpg', 'txt' => 'Fight To Survive'), array('img' => 'creative.jpg', 'txt' => 'Build Something Amazing'), array('img' => 'pigmen.jpg', 'txt' => 'Jesse Pigmen'));
+                ?>
+               
             </div>
         </div>
     </div>

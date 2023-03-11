@@ -23,50 +23,14 @@ if (isset($_SESSION['username'])) {
     <div class="background">
         <?php include '../includes/header.php' ?>
         <div class="hero">
-            <!-- qeto posht ki me hek -->
-            <div class="slideshow">
-                <!--
-                include '../includes/slider.php';
+        
+            <?php include
+                    '../includes/slider.php';
                 // qetu punon Shota
-                get_slider(array('img' => 'hoe.jpg', 'txt' => "Y’all Know What They Call These"), array('img' => 'enderman.jpg', 'txt' => 'Don’t Look Now, It’s An Enderman!'), array('img' => 'creeper.jpg', 'txt' => 'Don’t Fear The Creeper'), array('img' => 'died.png', 'txt' => 'YOO F*** The Creeper'), array('img' => 'flexing.jpg', 'txt' => 'I’m Rich'), array('img' => 'lava.jpg', 'txt' => 'It’s Getting Hot In Here'));
-  -->
-                <div class="moving">
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/img-1.jpg" alt="" />
-                        <h1 class="slide-box-text">Lorem ipsum dolor sit amet.</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/img-2.jpg" alt="" />
-                        <h1 class="slide-box-text">Lorem ipsum dolor sit amet.</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/cow.png" alt="" />
-                        <h1 class="slide-box-text">
-                            Vegetarian's Will Be Mad About This
-                        </h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/sheep.png" alt="" />
-                        <h1 class="slide-box-text">These Getting Killed Too</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/img-1.jpg" alt="" />
-                        <h1 class="slide-box-text">Lorem ipsum dolor sit amet.</h1>
-                    </div>
-                    <div class="slide-box">
-                        <img src="../assets/img/slider/img-2.jpg" alt="" />
-                        <h1 class="slide-box-text">Lorem ipsum dolor sit amet.</h1>
-                    </div>
-                </div>
-                <div class="slider-command">
-                    <button onclick="forward()" class="slider-btn">
-                        <i class="bi bi-forward-fill"></i>
-                    </button>
-
-                    <button onclick="back()" class="slider-btn">
-                        <i class="bi bi-forward-fill"></i>
-                    </button>
-                </div>
+                get_slider(array('img' => 'img-1.jpg', 'txt' => "Lorem ipsum dolor sit amet."), array('img' => 'img-2.jpg', 'txt' => 'Lorem ipsum dolor sit amet.'), array('img' => 'cow.png', 'txt' => 'Vegetarians Will Be Mad About This'), array('img' => 'sheep.png', 'txt' => 'These Getting Killed Too'), array('img' => 'img-1.jpg', 'txt' => 'Lorem ipsum dolor sit amet.'), array('img' => 'img-2.jpg', 'txt' => 'Lorem ipsum dolor sit amet.'));
+                ?>
+                
+                
             </div>
         </div>
     </div>

@@ -24,11 +24,11 @@ if (isset($_SESSION['username'])) {
         <div class="hero">
             <!-- qeto posht e hek -->
             <div class="slideshow">
-                <!--
-                include '../includes/slider.php';
+            <?php include
+                    '../includes/slider.php';
                 // qetu punon Shota
-                get_slider(array('img' => 'hoe.jpg', 'txt' => "Y’all Know What They Call These"), array('img' => 'enderman.jpg', 'txt' => 'Don’t Look Now, It’s An Enderman!'), array('img' => 'creeper.jpg', 'txt' => 'Don’t Fear The Creeper'), array('img' => 'died.png', 'txt' => 'YOO F*** The Creeper'), array('img' => 'flexing.jpg', 'txt' => 'I’m Rich'), array('img' => 'lava.jpg', 'txt' => 'It’s Getting Hot In Here'));
-  -->
+                get_slider(array('img' => 'new blocks.jpg', 'txt' => "New Blocks"), array('img' => 'boom.jpg', 'txt' => 'Booooooom!'), array('img' => 'tools.jpg', 'txt' => 'Gather Your Strength'), array('img' => 'friends.jpg', 'txt' => 'Unite. Fight. Survive'), array('img' => 'lapiz.png', 'txt' => 'I Thought I Found Diamonds'), array('img' => 'building.jpg', 'txt' => 'Bob The Builder'));
+                ?>
                 <div class="moving">
                     <div class="slide-box">
                         <img src="../assets/img/slider/new blocks.jpg" alt="" />
