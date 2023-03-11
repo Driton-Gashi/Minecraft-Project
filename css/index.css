@@ -447,7 +447,7 @@ button.wrong-password {
 .sign-up-img .ghast {
   position: absolute;
   width: 100px;
-  z-index: 3;
+  z-index: 999;
   object-fit: scale-down;
   filter: contrast(150%);
   animation: ghastMove 8s ease-in-out;

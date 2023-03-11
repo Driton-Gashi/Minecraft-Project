@@ -5,105 +5,110 @@ if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
     exit();
 } else {
 ?>
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="./assets/img/icons/favicon.ico" type="image/x-icon" />
-        <title>Login</title>
-        <link rel="stylesheet" href="./css/index.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/img/icons/favicon.ico" type="image/x-icon" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/index.css" />
 
-    </head>
+</head>
+<!-- Loading Effect -->
+
+<body class="noScroll">
     <!-- Loading Effect -->
+    <div class="loader-wrapper">
+        <img src="./assets/img/icons/Minecraft-block.png" alt="" class="loader">
+        <img src="./assets/img/icons/Minecraft-Logo.png" width="300px" alt="">
+    </div>
+    <script>
+    window.addEventListener("load", () => {
+        document.querySelector(".loader-wrapper").classList.add("hide");
+        document.body.classList.remove("noScroll");
+    })
+    </script>
+    <section id="sign-up">
+        <section class="sign-up-wrapper">
+            <button class="guest-btn">Continue as Guest</button>
 
-    <body class="noScroll">
-        <!-- Loading Effect -->
-        <div class="loader-wrapper">
-            <img src="./assets/img/icons/Minecraft-block.png" alt="" class="loader">
-            <img src="./assets/img/icons/Minecraft-Logo.png" width="300px" alt="">
-        </div>
-        <script>
-            window.addEventListener("load", () => {
-                document.querySelector(".loader-wrapper").classList.add("hide");
-                document.body.classList.remove("noScroll");
-            })
-        </script>
-        <section id="sign-up">
-            <section class="sign-up-wrapper">
-                <button onclick="continueAsGuest()" class="guest-btn">Continue as Guest</button>
+            <div class="sign-up-form">
+                <form action="./php/login.php" method="post"
+                    class="<?= isset($_SESSION['LoginStatus']) ? $_SESSION['LoginStatus'] : "" ?> login">
+                    <img src="./assets/img/icons/Minecraft-Logo.png" alt="" />
+                    <div class="center">
 
-                <div class="sign-up-form">
-                    <form action="./php/login.php" method="post" class="<?= isset($_SESSION['LoginStatus']) ? $_SESSION['LoginStatus'] : "" ?> login">
-                        <img src="./assets/img/icons/Minecraft-Logo.png" alt="" />
-                        <div class="center">
+                        <h1 class="username-label">Username</h1>
+                        <input name="usernameLogin" class="username" type="text" />
 
-                            <h1 class="username-label">Username</h1>
-                            <input name="usernameLogin" class="username" type="text" />
-
-                            <h1 class="password-label">Password</h1>
-                            <input name="passwordLogin" type="password" class="password" />
-                            <h1 class="validation-message l <?php if (isset($_SESSION['class'])) echo $_SESSION['class'] ?>">
-                                <?php
+                        <h1 class="password-label">Password</h1>
+                        <input name="passwordLogin" type="password" class="password" />
+                        <h1
+                            class="validation-message l <?php if (isset($_SESSION['class'])) echo $_SESSION['class'] ?>">
+                            <?php
                                 if (isset($_SESSION['message'])) {
                                     echo $_SESSION['message'];
                                 }
                                 ?>
-                            </h1>
+                        </h1>
 
-                            <button type="submit">Login</button>
+                        <button type="submit">Login</button>
 
-                            <h1 class="register-message">
-                                <span class="haveAccount">Don't have an account</span>
-                                <span class="register-message-btn l">register</span>
-                            </h1>
-                        </div>
-                    </form>
-                    <!-- Register Form -->
-                    <form action="./php/register.php" method="post" class="<?= isset($_SESSION['RegisterStatus']) ? $_SESSION['RegisterStatus'] : "hide" ?> register" enctype="multipart/form-data">
-                        <img src="./assets/img/icons/Minecraft-Logo.png" alt="" />
-                        <div class="center">
+                        <h1 class="register-message">
+                            <span class="haveAccount">Don't have an account</span>
+                            <span class="register-message-btn l">register</span>
+                        </h1>
+                    </div>
+                </form>
+                <!-- Register Form -->
+                <form action="./php/register.php" method="post"
+                    class="<?= isset($_SESSION['RegisterStatus']) ? $_SESSION['RegisterStatus'] : "hide" ?> register"
+                    enctype="multipart/form-data">
+                    <img src="./assets/img/icons/Minecraft-Logo.png" alt="" />
+                    <div class="center">
 
-                            <h1 class="username-label">Username</h1>
-                            <input name="usernameRegister" class="username r" type="text" />
+                        <h1 class="username-label">Username</h1>
+                        <input name="usernameRegister" class="username r" type="text" />
 
-                            <h1 class="password-label">Password</h1>
-                            <input name="passwordRegister" type="password" class="password r" />
+                        <h1 class="password-label">Password</h1>
+                        <input name="passwordRegister" type="password" class="password r" />
 
-                            <h1 class="confirm-password-label">Confirm password</h1>
-                            <input name="confirmPassword" type="password" class="confirm-password" />
-                            <h1 class="confirm-password-label">Upload Image (optional)</h1>
-                            <input name="image" type="file" class="file r" />
+                        <h1 class="confirm-password-label">Confirm password</h1>
+                        <input name="confirmPassword" type="password" class="confirm-password" />
+                        <h1 class="confirm-password-label">Upload Image (optional)</h1>
+                        <input name="image" type="file" class="file r" />
 
 
-                            <h1 class="validation-message r <?php if (isset($_SESSION['class'])) echo $_SESSION['class'] ?>">
-                                <?php
+                        <h1
+                            class="validation-message r <?php if (isset($_SESSION['class'])) echo $_SESSION['class'] ?>">
+                            <?php
                                 if (isset($_SESSION['message'])) {
                                     echo $_SESSION['message'];
                                 } ?>
-                            </h1>
+                        </h1>
 
-                            <button class="r" type="submit">Register</button>
+                        <button class="r" type="submit">Register</button>
 
-                            <h1 class="register-message">
-                                <span class="haveAccount">have an account</span>
-                                <span class="register-message-btn r">Login</span>
-                            </h1>
-                        </div>
-                    </form>
-                </div>
-                <div class="sign-up-img">
-                    <img class="ghast" src="./assets/img/icons/ghast.gif" alt="" />
-                    <img class="sign-up-image" src="./assets/img/background/Enderman.webp" alt="">
-                </div>
-            </section>
+                        <h1 class="register-message">
+                            <span class="haveAccount">have an account</span>
+                            <span class="register-message-btn r">Login</span>
+                        </h1>
+                    </div>
+                </form>
+            </div>
+            <div class="sign-up-img">
+                <img class="ghast" src="./assets/img/icons/ghast.gif" alt="" />
+                <img class="sign-up-image" src="./assets/img/background/Enderman.webp" alt="">
+            </div>
         </section>
-    </body>
-    <script src="./js/sign-up.js"></script>
+    </section>
+</body>
+<script src="./js/sign-up.js"></script>
 
-    </html>
+</html>
 <?php
 }
 ?>

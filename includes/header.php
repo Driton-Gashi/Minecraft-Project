@@ -1,5 +1,5 @@
 <?php
-if ($_SESSION['role'] = 'admin') {
+if ($_SESSION['role'] == 'admin') {
     require '../php/db_conn.php';
     $query = $pdo->prepare('SELECT * FROM messages');
     $query->execute();
@@ -15,7 +15,7 @@ if ($_SESSION['role'] = 'admin') {
             <h1 class="hide inboxWarning">No messages to show</h1>
             <?php
             foreach ($messages as $message) { ?>
-                <div class="inbox-message">
+                <div class="inbox-message"> 
                     <div onclick="deleteInboxMessage(<?= $message['id'] ?>)" class="delete-message"><i class="bi bi-trash3-fill"></i>
                     </div>
                     <h3 class="inbox-message-title">Message ID: <?= $message['id'] ?></h3>
@@ -83,25 +83,25 @@ if ($_SESSION['role'] = 'admin') {
                 <li class="status-wrapper"><i class="bi bi-chat-dots"></i>
                     <select title="Change your status" onchange="statusChange()" class="status" name="" id="">
 
+
                         <option value="active">Active <span class="dot green"></span></option>
                         <option value="busy">Busy </option>
                         <option value="invisible">Invisible</option>
                     </select>
                 </li>
                 <?php
-                if ($_SESSION['role'] !== 'admin') {
+                if ($_SESSION['role'] == 'admin') {
                 ?>
-                    <li>
-                        <i class="bi bi-gear-fill"></i> Settings
-
-                    </li>
-                <?php } else { ?>
                     <li onclick="(()=>{
                 window.location = './Dashboard.php'
               })()">
                         <i class="bi bi-pencil-square"></i> Admin Dashboard
                     </li>
                     <li onclick="showInbox()"><i class="bi bi-inbox-fill"></i> Inbox</li>
+                <?php } else { ?>
+                    <li>
+                        <i class="bi bi-gear-fill"></i> Settings
+                    </li>
                 <?php } ?>
                 <li onclick="logOut()"><i class="bi bi-box-arrow-left"></i> Log Out</li>
             </ul>

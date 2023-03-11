@@ -34,6 +34,7 @@ if (isset($_SESSION['role']) && $_SESSION['role']  == 'admin') {
                     <img class="logo" src="../assets/img/icons/Minecraft-Logo.png" alt="" />
                     <div onclick="hideRegisterForm()" class="closeRegisterBtn"><i class="bi bi-x-lg"></i></div>
                     <div class="center">
+
                         <h3 class="username-label">Username</h3>
                         <input name="usernameRegister" class="username r" type="text" />
 
@@ -96,8 +97,7 @@ if (isset($_SESSION['role']) && $_SESSION['role']  == 'admin') {
                                     <div class="edit green tableBtn">Edit</div>
                                     <button type="submit" class="confirm hide green tableBtn">Confirm</button>
                                     <div class="cancel hide red tableBtn">Cancel</div>
-                                    <div onclick="deleteUser(<?= $user['id'] ?>)" class="delete red tableBtn">Delete
-                                    </div>
+                                    <div onclick="deleteUser(<?= $user['id'] ?>)" class="delete red tableBtn">Delete</div>
                                 </td>
                             </form>
 
