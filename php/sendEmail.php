@@ -7,7 +7,6 @@ use PHPMailer\PHPMailer\SMTP;
 
 require './db_conn.php';
 
-
 if (isset($_SESSION['username'])) {
     $name = $_GET['name'];
     $userEmail = $_GET['email'];
@@ -25,7 +24,6 @@ if (isset($_SESSION['username'])) {
     require './PHPMailer.php';
     require './SMTP.php';
     require './Exception.php';
-
 
     $mail = new PHPMailer();
     $mail->isSMTP();
@@ -67,7 +65,6 @@ if (isset($_SESSION['username'])) {
             </table>
         </body>
     </html>
-    
     ";
 
     $mail->addAddress("Dritongashi1995@gmail.com");
