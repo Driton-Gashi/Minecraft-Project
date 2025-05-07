@@ -84,6 +84,3 @@ Start your local server (XAMPP/WAMP) and navigate to the project folder in the b
 🤝 Credits
 Projekt nga: Driton
 Lënda: Inxhinieri e Webit
-
-📬 Contact
-💼 GitHub: github.com/dritondev
